@@ -11,7 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            echo "opa";
+            echo "Sexta";
         ?>
         <!--
             
@@ -19,6 +19,6 @@ and open the template in the editor.
             $reg_query = "INSERT INTO teste (nome, senha) VALUES ('Vinicius', 10);";
             $res = pg_query($conn, $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
             ?>-->
-        <h1>mentira</h1>
+        
     </body>
 </html>

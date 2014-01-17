@@ -1,0 +1,96 @@
+--Aqui segue a descricao das tabelas criada 
+--para o Projeto Guaragas
+
+-- Table: administrador
+
+-- DROP TABLE administrador;
+
+CREATE TABLE administrador
+(
+  nome character varying(50) NOT NULL,
+  login character varying(15) NOT NULL,
+  senha character varying(15) NOT NULL,
+  CONSTRAINT nome PRIMARY KEY (nome)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE administrador
+  OWNER TO postgres;
+
+-- Table: cliente
+
+-- DROP TABLE cliente;
+
+CREATE TABLE cliente
+(
+  nome character varying(30) NOT NULL,
+  contato character varying(14) NOT NULL,
+  rua character varying(50) NOT NULL,
+  bairro character varying(25) NOT NULL,
+  numero integer NOT NULL,
+  CONSTRAINT endereco PRIMARY KEY (rua, bairro, numero)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE cliente
+  OWNER TO postgres;
+
+-- Table: funcionario
+
+-- DROP TABLE funcionario;
+
+CREATE TABLE funcionario
+(
+  cpf character varying(14) NOT NULL,
+  nome character varying(30) NOT NULL,
+  identidade character varying(15) NOT NULL,
+  login character varying(15) NOT NULL,
+  senha character varying(15) NOT NULL,
+  salario real NOT NULL,
+  telefone character varying(14) NOT NULL,
+  cargo character varying(20) NOT NULL,
+  CONSTRAINT cpf PRIMARY KEY (cpf)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE funcionario
+  OWNER TO postgres;
+
+-- Table: produto
+
+-- DROP TABLE produto;
+
+CREATE TABLE produto
+(
+  nome character varying(50) NOT NULL,
+  valor real NOT NULL,
+  "codProduto" integer NOT NULL,
+  CONSTRAINT "codProduto" PRIMARY KEY ("codProduto")
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE produto
+  OWNER TO postgres;
+
+-- Table: venda
+
+-- DROP TABLE venda;
+
+CREATE TABLE venda
+(
+  data character varying(10) NOT NULL,
+  hora character varying(8) NOT NULL,
+  valor real NOT NULL,
+  quantidade integer NOT NULL,
+  "codProduto" integer NOT NULL,
+  CONSTRAINT horario PRIMARY KEY (data, hora)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE venda
+  OWNER TO postgres;

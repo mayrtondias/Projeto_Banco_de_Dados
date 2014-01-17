@@ -9,16 +9,18 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title></title>
     </head>
+     
     <body>
-        <?php
-            echo "Sim";
-        ?>
-        <!--
-            
-            $conn = pg_connect("host=localhost dbname=postgres user=postgres  password=12345678 port=5432") or die ('Erro  ao conectar com o servidor');
-            $reg_query = "INSERT INTO teste (nome, senha) VALUES ('Vinicius', 10);";
-            $res = pg_query($conn, $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
-            ?>-->
-        
+        <center>
+            <div>
+                <form action="valida.php" method="post">
+                    Login:<br>
+                    <input type="text" name="login"><br>
+                    senha:<br>
+                    <input type="password" name="senha"><br>
+                    <input type="submit" value="Entrar">
+                </form>
+            </div>
+        </center>
     </body>
 </html>

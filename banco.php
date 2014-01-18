@@ -6,31 +6,31 @@
  */
 
 class banco {
-    
-    private $conexao=null;
-    
-    public function __construct() {
-        $this->conectarBanco();
-    }
 
-    public function conectarBanco() {
-        $host="localhost";
-        
-        $conexao = pg_connect("host=localhost dbname=postgres user=postgres  password=12345678 port=5432") or die ('Erro  ao conectar com o servidor'); 
+    public function __construct() {
+        $conetar=$this->conectarBanco();
+    }
     
-        
+    public function conectarBanco() {
+        $host = "localhost";//host
+        $db = "guaragas";  //nome do banco de dados
+        $user = "postgres"; //usuario do banco de dados
+        $passwd = "12345678"; //senha do banco de dados
+
+        //Conectando ao banco de dados guaragas
+        $conn = pg_connect("host=$host dbname=$db user=$user password=$passwd");
+    
+        return $conn;
     }
     
     public function inserir() {
         
-        $reg_query = "INSERT INTO teste (nome, senha) VALUES ('Vinicius', 10);";
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
-    
+       //Query para inserir 1 registro na tabela
+        $reg_query = "INSERT INTO produto (nome, valor, codProduto) VALUES ('ton',0,0);";
+        
+        
+        //Executando query para inserir o registro na tabela
+        $res = pg_query($this->conectarBanco(), $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
     }
 }
 
-/*
-$conn = pg_connect("host=localhost dbname=postgres user=postgres  password=12345678 port=5432") or die ('Erro  ao conectar com o servidor');
-            $reg_query = "INSERT INTO teste (nome, senha) VALUES ('Vinicius', 10);";
-            $res = pg_query($conn, $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
-            */

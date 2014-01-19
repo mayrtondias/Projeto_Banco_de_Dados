@@ -30,6 +30,18 @@ class banco {
        //Query para inserir 1 registro na tabela
         $reg_query = "INSERT INTO produto  VALUES ('$nome',$valor,$codigo);";
         
+        //Executando query para inserir o registro na tabela produto
+        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
+        
+    }
+    
+    public function inserirAdministrador($nome, $login, $senha){
+        
+        $conexao=$this->conectarBanco();
+        
+       //Query para inserir 1 registro na tabela administrador
+        $reg_query = "INSERT INTO administrador  VALUES ('$nome','$login','$senha');";
+        
         //Executando query para inserir o registro na tabela
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
         

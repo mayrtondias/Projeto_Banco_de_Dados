@@ -58,5 +58,18 @@ class banco {
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
         
     }
+    
+    public function inserirVenda($valor, $quantidade, $codigoProduto){
+        
+        $conexao=$this->conectarBanco();
+        $data="j";
+        $hora="jh";
+       //Query para inserir 1 registro na tabela administrador
+        $reg_query = "INSERT INTO venda  VALUES ('$data','$hora', $valor, $quantidade, $codigoProduto);";
+        
+        //Executando query para inserir o nregistro na tabela
+        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
+        
+    }
 }
 

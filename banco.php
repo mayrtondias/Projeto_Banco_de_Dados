@@ -26,7 +26,7 @@ class banco {
     public function inserir() {
         
        //Query para inserir 1 registro na tabela
-        $reg_query = "INSERT INTO produto (nome, valor, codProduto) VALUES ('ton',0,0);";
+        $reg_query = "INSERT INTO produto VALUES ('Vinicius',2.9,91);";
         
         
         //Executando query para inserir o registro na tabela

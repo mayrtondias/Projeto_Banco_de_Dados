@@ -62,7 +62,7 @@ class banco {
     public function inserirVenda($valor, $quantidade, $codigoProduto){
         
         $conexao=$this->conectarBanco();
-        $data="j";
+        $data=  date($d);
         $hora="jh";
        //Query para inserir 1 registro na tabela administrador
         $reg_query = "INSERT INTO venda  VALUES ('$data','$hora', $valor, $quantidade, $codigoProduto);";
@@ -83,5 +83,19 @@ class banco {
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
         
     }
+    
+    public function pesquisarProduto($pesquisa){
+        
+        $conexao=$this->conectarBanco();
+        
+        //Query para listar registros da tabela
+        $show_query = "SELECT $pesquisa FROM produto";
+        
+        //Executando query para listar os registros da tabela
+        $res = pg_query($conexao, $show_query) or die("Nao foi possivel executar a sua pesquisa!\n");
+        
+        return $res;
+    }
+    
 }
 

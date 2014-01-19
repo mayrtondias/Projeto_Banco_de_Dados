@@ -11,7 +11,7 @@ class banco {
         $conetar=$this->conectarBanco();
     }
     
-    public function conectarBanco() {
+    private function conectarBanco() {
         $host = "localhost";//host
         $db = "guaragas";  //nome do banco de dados
         $user = "postgres"; //usuario do banco de dados
@@ -23,14 +23,16 @@ class banco {
         return $conn;
     }
     
-    public function inserir() {
+    public function inserirProduto($nome, $valor, $codigo){
+        
+        $conexao=$this->conectarBanco();
         
        //Query para inserir 1 registro na tabela
-        $reg_query = "INSERT INTO produto VALUES ('Vinicius',2.9,91);";
-        
+        $reg_query = "INSERT INTO produto  VALUES ('$nome',$valor,$codigo);";
         
         //Executando query para inserir o registro na tabela
-        $res = pg_query($this->conectarBanco(), $reg_query) or die("Nao foi possivel executar a query: $reg_query\n");
+        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
+        
     }
 }
 

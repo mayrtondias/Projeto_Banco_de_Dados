@@ -46,5 +46,17 @@ class banco {
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
         
     }
+    
+    public function inserirCliente($nome, $contato, $rua, $bairro, $numero){
+        
+        $conexao=$this->conectarBanco();
+        
+       //Query para inserir 1 registro na tabela administrador
+        $reg_query = "INSERT INTO cliente  VALUES ('$nome','$contato','$rua','$bairro',$numero);";
+        
+        //Executando query para inserir o registro na tabela
+        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
+        
+    }
 }
 

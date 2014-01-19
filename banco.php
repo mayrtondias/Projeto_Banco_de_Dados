@@ -97,5 +97,18 @@ class banco {
         return $res;
     }
     
+    public function pesquisarAdministrador($pesquisa){
+        
+        $conexao=$this->conectarBanco();
+        
+        //Query para listar registros da tabela
+        $show_query = "SELECT $pesquisa FROM administrador";
+        
+        //Executando query para listar os registros da tabela
+        $res = pg_query($conexao, $show_query) or die("Nao foi possivel executar a sua pesquisa!\n");
+        
+        return $res;
+    }
+    
 }
 

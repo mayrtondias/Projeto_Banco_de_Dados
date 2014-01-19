@@ -83,13 +83,13 @@ class banco {
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
         
     }
-    
-    public function pesquisarProduto($pesquisa){
+        
+    public function pesquisar($pesquisa, $tabela){
         
         $conexao=$this->conectarBanco();
         
         //Query para listar registros da tabela
-        $show_query = "SELECT $pesquisa FROM produto";
+        $show_query = "SELECT $pesquisa FROM $tabela";
         
         //Executando query para listar os registros da tabela
         $res = pg_query($conexao, $show_query) or die("Nao foi possivel executar a sua pesquisa!\n");
@@ -97,18 +97,7 @@ class banco {
         return $res;
     }
     
-    public function pesquisarAdministrador($pesquisa){
-        
-        $conexao=$this->conectarBanco();
-        
-        //Query para listar registros da tabela
-        $show_query = "SELECT $pesquisa FROM administrador";
-        
-        //Executando query para listar os registros da tabela
-        $res = pg_query($conexao, $show_query) or die("Nao foi possivel executar a sua pesquisa!\n");
-        
-        return $res;
-    }
+    
     
 }
 

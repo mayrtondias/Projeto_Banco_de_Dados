@@ -18,9 +18,11 @@ and open the template in the editor.
                     <input type="text" name="login"><br>
                     senha:<br>
                     <input type="password" name="senha"><br>
-                    Atenção: Não foi possivel validar seu acesso! 
-                    Caso voçe seja um usuario cadastrado verifique seu Login e Senha
-                    Caso contrario, entre contador com o Administrador.
+                    <h4 style="font-family: arial; font-size: 16px;color:#1C86EE">
+                        Atenção: Não foi possivel validar seu acesso!<br> 
+                        Caso você seja um usuario cadastrado verifique seu Login e Senha,<br>
+                        Caso contrario, entre em contato com o Administrador.<br>
+                    </h4>
                     <input type="submit" value="Entrar">
                 </form>
             </div>

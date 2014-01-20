@@ -13,8 +13,8 @@
             $login = $_POST['login'];      
             $senha = $_POST['senha'];
             
-            $_SESSION['login']==="";
-            $_SESSION['senha']==="";
+            $_SESSION['login']="";
+            $_SESSION['senha']="";
             
             $tabela="administrador";
             $pesquisa="*";
@@ -50,13 +50,12 @@
                     }
                 }
             }
-            echo " ".$_SESSION['login']." - ".$_SESSION['senha']." <br>Jesus<br>";
+            
             if( ($_SESSION['login']==="")&&($_SESSION['senha']==="")){
                 $_SESSION['login']="erro";
                 $_SESSION['senha']="erro";
                 header('location: indexErro.php');
-            }
-            echo "<br>fim<br>";
+            } 
         ?>
     </body>
 </html>

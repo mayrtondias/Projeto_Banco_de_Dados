@@ -13,11 +13,13 @@
                 $men="Cadastro feito com Sucesso!";
                 break;
             case 2:
-                $men="O campo email não pode ficar em branco";
+                $men="A decidir";
                 break;
             case 3:
+                $men="A decidir";
                 break;
             default :
+                $men=" ";
                 break;
         }
         echo $men;

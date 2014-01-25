@@ -5,15 +5,23 @@
         <group>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/index.php</file>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcCadCliente.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminValidaAdministrador.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/banco.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/mensagem.php</file>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/guarda.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHome.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminCadAdmin.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeAdminCad.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeAdmin.php</file>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/sair.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcValidaCliente.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeFinancas.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminValidaAdministrador.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeFuncDelete.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/banco.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeAdminList.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/mensagem.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeFunc.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeEstoque.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHome.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminHomeAdminAtualizar.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/adminCadAdmin.php</file>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/menuAdministrador.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcValidaCliente.php</file>
         </group>
     </open-files>
 </project-private>

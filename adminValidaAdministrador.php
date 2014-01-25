@@ -14,6 +14,7 @@
     $senha = $_POST['senha'];      
     $administradorCadastrado="f";
     $_SESSION['erro']="";
+    
     $tabela="administrador";
     $pesquisa="*";
 

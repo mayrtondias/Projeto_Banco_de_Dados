@@ -46,6 +46,6 @@
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');
     }else{
-        header('location: adminCadAdmin.php');
+        header('location: adminHomeAdmin.php');
     }
 ?>

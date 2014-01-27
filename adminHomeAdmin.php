@@ -23,7 +23,6 @@ and open the template in the editor.
                     <a href="adminHomeAdminList.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Listar Administradores         </b></a><br><hr>
                     <a href="adminHomeFuncDelete.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Excluir Administrador         </b></a><br><hr>
                     <a href="adminHomeEstoqueAtualizar.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Atualizar Conta        </b></a><br><hr>
-                    <a href="sair.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Sair         </b></a><br>
                 </center>
             </div>
         </center>

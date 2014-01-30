@@ -17,7 +17,7 @@ and open the template in the editor.
         
         <center>
             <div>
-                <form action="funcValidaCliente.php" method="post">
+                <form action="ValidaCliente.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente<br>
                     Nome:<br>
                     <input type="text" name="nome"><br>

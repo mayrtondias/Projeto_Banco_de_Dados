@@ -54,7 +54,7 @@
                                         <td><?php echo $registro['bairro']; ?></td>
                                         <td><?php echo $registro['numero']; ?></td>
                                         <td><?php echo $registro['contato']; ?></td>
-                                        <td><button type="submit" name="selecionado" value="<?php echo $registro['rua']."-".$registro['bairro']."-".$registro['numero']; ?>" >OK</button></td>
+                                        <td><button type="submit" name="selecionado" value="<?php echo $registro['rua']."§".$registro['bairro']."§".$registro['numero']; ?>" >OK</button></td>
                                     </tr>
                                     <?php
                                   }

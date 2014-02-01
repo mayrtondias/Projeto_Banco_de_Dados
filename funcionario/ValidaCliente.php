@@ -1,12 +1,12 @@
 <?php
     
-    require 'banco.php';
+    require '../banco/banco.php';
     
     $banco=new banco();
     session_start();
     
     if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
-        header('location: desconectado.php');
+        header('location: ../util/desconectado.php');
     }
             
     $nome = $_POST['nome'];      
@@ -51,6 +51,6 @@
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');
     }else{
-        header('location: funcCadCliente.php');
+        header('location: CadCliente.php');
     }
 ?>

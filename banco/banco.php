@@ -23,12 +23,12 @@ class banco {
         return $conn;
     }
     
-    public function inserirProduto($nome, $valor, $codigo){
+    public function inserirProduto($nome, $valor, $codigo,$quantidade){
         
         $conexao=$this->conectarBanco();
         
        //Query para inserir 1 registro na tabela
-        $reg_query = "INSERT INTO produto  VALUES ('$nome',$valor,$codigo);";
+        $reg_query = "INSERT INTO produto  VALUES ('$nome',$valor,$codigo,$quantidade);";
         
         //Executando query para inserir o registro na tabela produto
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
@@ -59,13 +59,13 @@ class banco {
         
     }
     
-    public function inserirVenda($valor, $quantidade, $codigoProduto){
+    public function inserirVenda($valor, $quantidade, $codigoProduto, $status){
         
         $conexao=$this->conectarBanco();
         $data=  date($d);
         $hora="jh";
        //Query para inserir 1 registro na tabela administrador
-        $reg_query = "INSERT INTO venda  VALUES ('$data','$hora', $valor, $quantidade, $codigoProduto);";
+        $reg_query = "INSERT INTO venda  VALUES ('$data','$hora', $valor, $quantidade, $codigoProduto, '$status');";
         
         //Executando query para inserir o nregistro na tabela
         $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");

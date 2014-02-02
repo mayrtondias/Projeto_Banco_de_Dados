@@ -4,11 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/Vendas.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/validaVenda.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/Home.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/menuFuncionario.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/vendaPesquisarClienteRua.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/vendaPesquisarClienteNome.php</file>
             <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/CadCliente.php</file>
-            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/ValidaCliente.php</file>
+            <file>file:/E:/PostgreSQL/apache/www/Projeto_Banco_de_Dados/funcionario/selecionarProduto.php</file>
         </group>
     </open-files>
 </project-private>

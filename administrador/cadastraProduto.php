@@ -23,11 +23,11 @@ and open the template in the editor.
                     Nome:<br>
                     <input type="text" name="nome"><br>
                     Valor:<br>
-                    <input type="number" name="login"><br>
+                    <input type="number" name="valor"><br>
                     Codigo do produto:<br>
-                    <input type="number" name="senha"><br>
+                    <input type="number" name="codProduto"><br>
                     Quantidade:<br>
-                    <input type="number" name="senha"><br>
+                    <input type="number" name="quantidade"><br>
                     <?php
                         if(isset($_SESSION['erro'])==TRUE){
                             $tipo=(int)$_SESSION['erro'];
@@ -36,13 +36,16 @@ and open the template in the editor.
                                     $men="O campo nome não deve ficar em branco<br>nem superior a 50 caracteres<br>";
                                     break;
                                 case 2:
-                                    $men="O campo Valor não deve ficar em branco<br>nem ser um valor negativo<br>nem inferior à 8 caracteres<br>";
+                                    $men="O campo Valor não deve ficar em branco<br>nem ser um valor negativo<br>";
                                     break;
                                 case 3:
                                     $men="O campo Codigo do Produto não deve ficar em branco<br>nem ser um valor negativo.<br>";
                                     break;
                                 case 4:
-                                    $men="Administrador ja cadastrado no sistema<br>";
+                                    $men="O campo Quantidade não deve ficar em branco<br>nem ser um valor negativo<br>";
+                                    break;
+                                case 5:
+                                    $men="Produto ja cadastrado no sistema<br>";
                                     break;
                                 default :
                                     $men="";

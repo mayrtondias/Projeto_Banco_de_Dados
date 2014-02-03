@@ -10,12 +10,13 @@
     }
             
     $nome = $_POST['nome'];      
-    $login = $_POST['login'];
-    $senha = $_POST['senha'];      
+    $valor = $_POST['valor'];
+    $codProduto = $_POST['codProduto'];  
+    $quantidade = $_POST['quantidade'];
     $administradorCadastrado="f";
     $_SESSION['erro']="";
     
-    $tabela="administrador";
+    $tabela="produto";
     $pesquisa="*";
 
     $resultado=$banco->pesquisar($pesquisa, $tabela);
@@ -24,27 +25,29 @@
         echo "Problema na pesquisa<br>";
     } else{
           while($registro = pg_fetch_array($resultado)){
-              if($registro['login']===$rua){
-                  $administradorCadastrado="t";
+              if($registro['codProduto']===$codProduto){
+                  $produtoCadastrado="t";
               }
           }
      }
  
     if(($nome==="")||(strlen($nome)>50)){
         $_SESSION['erro']="1";
-    } else if(($login==="")||(strlen($login)>15)){
+    } else if(($valor===NULL)||($valor<0)){
         $_SESSION['erro']="2";
-    } else if(($senha==="")||(strlen($senha)>15)||(strlen($senha)<8)){
+    } else if(($codProduto===NULL)||($valor<0)){
         $_SESSION['erro']="3";
-    } else if($clienteCadastrado==="t"){
+    } else if(($quantidade===NULL)||($valor<0)){
         $_SESSION['erro']="4";
+    } else if($produtoCadastrado==="t"){
+        $_SESSION['erro']="5";
     } 
     
     if($_SESSION['erro'] === ""){
-        $banco->inserirAdministrador($nome, $login, $senha);
+        $banco->inserirProduto($nome, $valor, $codProduto,$quantidade);
         unset($_SESSION['erro']);
         $_SESSION['mensagem']="1";
-        header('location: ../util/mensagem.php');
+        header('location: mensagem.php');
     }else{
         header('location: HomeAdmin.php');
     }

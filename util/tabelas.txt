@@ -67,6 +67,7 @@ CREATE TABLE produto
 (
   nome character varying(50) NOT NULL,
   valor real NOT NULL,
+  quantidade integer NOT NULL,
   "codProduto" integer NOT NULL,
   CONSTRAINT "codProduto" PRIMARY KEY ("codProduto")
 )
@@ -87,6 +88,7 @@ CREATE TABLE venda
   valor real NOT NULL,
   quantidade integer NOT NULL,
   "codProduto" integer NOT NULL,
+  status character varying(1) NOT NULL,
   CONSTRAINT horario PRIMARY KEY (data, hora)
 )
 WITH (

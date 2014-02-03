@@ -44,7 +44,7 @@
         $banco->inserirAdministrador($nome, $login, $senha);
         unset($_SESSION['erro']);
         $_SESSION['mensagem']="1";
-        header('location: ../util/mensagem.php');
+        header('location: mensagem.php');
     }else{
         header('location: HomeAdmin.php');
     }

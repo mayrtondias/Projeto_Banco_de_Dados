@@ -37,22 +37,30 @@
  
     if(($nome==="")||(strlen($nome)>30)){
         $_SESSION['erro']="1";
-    } else if(($valor===NULL)||($valor<0)){////////////////////////////////////////////////////////////////////////////////////////////////
+    } else if(($login===NULL)||(strlen($login)>15)){////////////////////////////////////////////////////////////////////////////////////////////////
         $_SESSION['erro']="2";
-    } else if(($codProduto===NULL)||($valor<0)){
+    } else if(($senha===NULL)||(strlen($senha)>15)){
         $_SESSION['erro']="3";
-    } else if(($quantidade===NULL)||($valor<0)){
+    } else if(($identidade===NULL)||(strlen($identidade)>15)){
         $_SESSION['erro']="4";
-    } else if($produtoCadastrado==="t"){
+    } else if(($cpf===NULL)||(strlen($cpf)>14)){
         $_SESSION['erro']="5";
+    } else if(($salario===NULL)||($salario<0)){
+        $_SESSION['erro']="6";
+    } else if(($telefone===NULL)||(strlen($telefone)>14)){
+        $_SESSION['erro']="7";
+    } else if(($cargo===NULL)||(strlen($cargo)>20)){
+        $_SESSION['erro']="8";
+    } else if($funcionarioCadastrado==="t"){
+        $_SESSION['erro']="9";
     } 
     
     if($_SESSION['erro'] === ""){
-        $banco->inserirProduto($nome, $valor, $codProduto,$quantidade);
+        $banco->inserirFuncionario($cpf, $nome, $identidade, $login, $senha, $salario, $telefone, $cargo);
         unset($_SESSION['erro']);
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');
     }else{
-        header('location: HomeAdmin.php');
+        header('location: CadastraFunc.php');
     }
 ?>

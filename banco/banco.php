@@ -27,19 +27,25 @@ class banco {
         
         echo "Inciciando a criação do Banco de Dados Guaragas<br>";
         
-        //Query para criar o banco de dado
-        $criando_query = "CREATE DATABASE guaragas ;";
+        //Query para criar o banco de dado guaragas
+        $criando_query = "CREATE DATABASE guaragas0;";
         
         //Executando query para inserir o registro na tabela produto
         $res = pg_query($criando_query) or die("Não foi possivel criar o banco de dados guaragas\n");
         
+        echo "O Banco de Dados Guaragas foi criado com exito<br>";
+        echo "Iniciando a conexao<br>";
+        
         $host = "localhost";//host
-        $db = "guaragas";  //nome do banco de dados
+        $nomeBD = "guaragas0";  //nome do banco de dados
         $user = "postgres"; //usuario do banco de dados
         $passwd = "12345678"; //senha do banco de dados
 
         //Conectando ao banco de dados guaragas
         $conexao = pg_connect("host=$host dbname=$nomeBD user=$user password=$passwd");
+        
+        echo "Conexao estabelecida<br>";
+        echo "Iniciando a criação da tabela administrador<br>";
         
         $tab_query = "CREATE TABLE pessoa ( idpessoa integer PRIMARY KEY, nome text);";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");

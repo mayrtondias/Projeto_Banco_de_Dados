@@ -23,6 +23,28 @@ class banco {
         return $conn;
     }
     
+    public function criandoBanco($nomeBD){
+        //$conexao=$this->conectarBanco();
+        
+        //Query para criar o banco de dado
+        $criando_query = "CREATE DATABASE ".$nomeBD.";";
+        
+        //Executando query para inserir o registro na tabela produto
+        $res = pg_query($criando_query) or die("Nao foi possivel criar o banco de dados ".$nomeBD."\n");
+        
+        $host = "localhost";//host
+        //$db = "guaragas";  //nome do banco de dados
+        $user = "postgres"; //usuario do banco de dados
+        $passwd = "12345678"; //senha do banco de dados
+
+        //Conectando ao banco de dados guaragas
+        $conexao = pg_connect("host=$host dbname=$nomeBD user=$user password=$passwd");
+        
+        $tab_query = "CREATE TABLE pessoa ( idpessoa integer PRIMARY KEY, nome text);";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");
+    }
+            
+    
     public function inserirProduto($nome, $valor, $codigo,$quantidade){
         
         $conexao=$this->conectarBanco();

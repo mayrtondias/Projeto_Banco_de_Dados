@@ -19,7 +19,7 @@ and open the template in the editor.
 
                     $banco=new banco();
                     
-                    $banco->criandoBanco("fmv");
+                    $banco->criandoBanco("felipe");
                     echo 'ok';
                 ?>
             </div>

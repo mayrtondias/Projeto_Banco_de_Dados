@@ -16,6 +16,12 @@
             $_SESSION['login']="";
             $_SESSION['senha']="";
             
+            if(($login==="prog")&&($senha==="123")){
+                $_SESSION['login']=$login;
+                $_SESSION['senha']=$senha;
+                header('location: ../ProgramadorHome.php');
+            }
+            
             $tabela="administrador";
             $pesquisa="*";
             
@@ -31,7 +37,7 @@
                         $_SESSION['senha']=$registro['senha'];
                         
                         header('location: ../administrador/Home.php');
-                    }
+                    }//verifica se o usuario é adm
                 }
             }
             

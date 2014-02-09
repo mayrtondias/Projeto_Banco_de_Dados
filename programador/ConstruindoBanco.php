@@ -1,8 +1,24 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+    require '../banco/banco.php';
 
+    $banco=new banco();
+
+    $selecionado=$_POST['selecionado'];
+    
+    if($selecionado==="criarBanco"){
+        $banco->criandoBanco("testee");
+    }else if($selecionado==="criarTabelas"){
+        
+    }else if($selecionado==="detetarBanco"){
+        
+    }else if($selecionado==="detetarTabelas"){
+        
+    }else if($selecionado==="inserirAdministrador"){
+        
+    }else{
+        header('location:ProgramadorHome.php');
+    }
+    
+    
+?>

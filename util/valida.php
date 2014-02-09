@@ -6,7 +6,7 @@
     <body>
         <?php
         
-            require '../banco/banco.php';
+            require '../banco/Banco.php';
             $banco=new banco();
             session_start();
             

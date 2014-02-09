@@ -19,7 +19,7 @@
             if(($login==="prog")&&($senha==="123")){
                 $_SESSION['login']=$login;
                 $_SESSION['senha']=$senha;
-                header('location: ../ProgramadorHome.php');
+                header('location: ../programador/ProgramadorHome.php');
             }
             
             $tabela="administrador";

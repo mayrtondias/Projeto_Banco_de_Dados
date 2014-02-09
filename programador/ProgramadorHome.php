@@ -21,7 +21,7 @@ and open the template in the editor.
                     session_start();
 
                     if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
-                        header('location:../util/desconectado.php');
+                        header('location:../util/Desconectado.php');
                     }
                 ?>
                 <form action="ConstruindoBanco.php" method="post">

@@ -13,12 +13,12 @@ and open the template in the editor.
      
     <body>
         <?php
-            require 'menuAdministrador.php';
+            require 'MenuAdministrador.php';
         ?>
         
         <center>
             <div>
-                <form action="validaFuncionario.php" method="post">
+                <form action="ValidaFuncionario.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente<br>
                     Nome:<br>
                     <input type="text" name="nome"><br>

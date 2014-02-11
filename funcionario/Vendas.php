@@ -12,7 +12,7 @@ and open the template in the editor.
      
     <body>
         <?php
-            require 'menuFuncionario.php';
+            require 'MenuFuncionario.php';
         ?>
         
         <center>
@@ -39,7 +39,7 @@ and open the template in the editor.
             </div>
             
             <div>
-                <form action="vendaPesquisarClienteRua.php" method="post">
+                <form action="VendaPesquisarClienteRua.php" method="post">
                     
                     Pesquisar por rua:<br>
                     <input type="text" name="pesquisarRua"><br>

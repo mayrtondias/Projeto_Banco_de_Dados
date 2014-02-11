@@ -12,7 +12,7 @@ and open the template in the editor.
      
     <body>
         <?php
-            require 'menuAdministrador.php';
+            require 'MenuAdministrador.php';
         ?>
     </body>
 </html>

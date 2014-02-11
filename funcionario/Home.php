@@ -12,7 +12,7 @@ and open the template in the editor.
      
     <body>
         <?php
-            require 'menuFuncionario.php';
+            require 'MenuFuncionario.php';
         ?>
     </body>
 </html>

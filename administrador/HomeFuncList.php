@@ -73,7 +73,7 @@
                               }
                               ++$contador;
                           }
-                          
+                          --$contador;
                           if($qtdeResult>0){
                               ?>
                               <td><button type="submit" name="selecionado" value="anterior" >Anterior</button></td>
@@ -81,7 +81,7 @@
                               
                           }
                           
-                          if(($contador/10)>=$qtdeResult){
+                          if((($contador/10)>=($qtdeResult+1))&&(($contador%10)!=0)){
                               ?>
                               <td><button type="submit" name="selecionado" value="proximo" >Próximo</button></td>
                               <?php

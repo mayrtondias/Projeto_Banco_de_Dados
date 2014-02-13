@@ -45,10 +45,7 @@
                         }else if($_POST['selecionado']==="proximo"){
                                 ++$qtdeResult;
                         }else $qtdeResult=0;
-                        
-                            
-                        
-                        
+
                         while($registro = pg_fetch_array($resultado)){
                               
                             if(($contador>=($qtdeResult*10))&&($contador<($qtdeResult*10+10))){
@@ -63,15 +60,21 @@
                               }
                               ++$contador;
                           }
-                          ?>
-                           <center>
-                                <td><button type="submit" name="selecionado" value="anterior" >Anterior</button></td>
-                                <td><button type="submit" name="selecionado" value="proximo" >Próximo</button></td>
-                           </center>
-                        <?php
+                          
+                          if($qtdeResult>0){
+                              ?>
+                              <td><button type="submit" name="selecionado" value="anterior" >Anterior</button></td>
+                              <?php
+                              
+                          }
+                          
+                          if(($contador/10)>=$qtdeResult){
+                              ?>
+                              <td><button type="submit" name="selecionado" value="proximo" >Próximo</button></td>
+                              <?php
+                          }
+                          
                       }
-
-
             ?>
                 </table>
             </form>

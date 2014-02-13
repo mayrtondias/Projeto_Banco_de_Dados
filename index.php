@@ -12,7 +12,7 @@ and open the template in the editor.
      
     <body>
         <center>
-            <div  style="border-radius:1em; width:20%; font-size:25px; background:#3399FF">
+            <div  style="border-radius:1em; width:20%; font-size:25px; background:#3399FF; margin: 15%">
                 <form action="util/valida.php" method="post">
                     <label style="color:white; font-family:arial; text-decoration:none; padding:5px">Login:</label><br>
                     <input type="text" name="login"><br>

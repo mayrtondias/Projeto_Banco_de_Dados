@@ -46,6 +46,14 @@ class banco {
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");
     }
             
+    public function criandoTabelaAdministrador() {
+        
+        
+    }
+    public function criandoTabelaFuncionario() {
+        
+        
+    }
     
     public function inserirProduto($nome, $valor, $codigo,$quantidade){
         

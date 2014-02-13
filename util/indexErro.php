@@ -12,17 +12,20 @@ and open the template in the editor.
      
     <body>
         <center>
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3399FF">
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3399FF; margin: 15%">
                 <form action="valida.php" method="post">
-                    Login:<br>
+                    <label style="color:white; font-family:arial; text-decoration:none; padding:5px">Login:</label><br>
                     <input type="text" name="login"><br>
-                    senha:<br>
+                    <label style="color:white; font-family:arial; text-decoration:none; padding:5px">Senha:</label><br>
                     <input type="password" name="senha"><br>
-                    <h4 style="font-family: arial; font-size: 16px;color:#1C86EE">
-                        Atenção: Não foi possivel validar seu acesso!<br> 
-                        Caso você seja um usuario cadastrado verifique seu Login e Senha,<br>
-                        Caso contrario, entre em contato com o Administrador.<br>
-                    </h4>
+                    
+                    <label style="color:red; font-family:arial; text-decoration:none; padding:5px; font-size: 14px">
+                        
+                        <b>Atenção: Não foi possivel validar seu acesso!
+                        Caso você seja um usuario cadastrado verifique seu Login e Senha,
+                        Caso contrario, entre em contato com o Administrador.
+                        </b>
+                    </label><br>
                     <input type="submit" value="Entrar">
                 </form>
             </div>

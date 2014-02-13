@@ -16,7 +16,7 @@ and open the template in the editor.
         ?>
         
         <center>
-            <div>
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px">
                 <form action="vendaPesquisarClienteNome.php" method="post">
                     
                     Pesquisar por nome:<br>
@@ -38,7 +38,7 @@ and open the template in the editor.
                 </form>
             </div>
             
-            <div>
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px; margin: 10px">
                 <form action="VendaPesquisarClienteRua.php" method="post">
                     
                     Pesquisar por rua:<br>

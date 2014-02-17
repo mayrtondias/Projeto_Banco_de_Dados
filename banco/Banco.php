@@ -1,6 +1,6 @@
 <?php
 
-/*Essa e a classe responsavel pelas principais funcoes no bando de dados de 
+/* Essa e a classe responsavel pelas principais funcoes no bando de dados de 
  * GuaraGas, ou seja, aqui se encontra os metodos para conectar ao Banco,
  * inserir, alterar e deletar elementos do Banco de Dados
  */

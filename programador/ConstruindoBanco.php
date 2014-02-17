@@ -9,7 +9,7 @@
     if($selecionado==="criarBanco"){
         $banco->criandoBanco("testee");
     }else if($selecionado==="criarTabelas"){
-        
+        $banco->criandoTabelaAdministrador();
     }else if($selecionado==="detetarBanco"){
         
     }else if($selecionado==="detetarTabelas"){

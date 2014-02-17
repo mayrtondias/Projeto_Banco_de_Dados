@@ -1,5 +1,5 @@
---Aqui segue a descricao das tabelas criada 
---para o Projeto Guaragas
+-- Aqui segue a descricao das tabelas criada 
+-- para o Projeto Guaragas
 
 -- Table: administrador
 

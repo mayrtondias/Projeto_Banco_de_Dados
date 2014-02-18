@@ -12,7 +12,7 @@
         $tipo=(int)$_SESSION['mensagem'];
         switch ($tipo){
             case 1:
-                $men="Cadastro feito com Sucesso!";
+                $men="Cadastro feito com Sucesso! ";
                 break;
             case 2:
                 $men="A decidir";

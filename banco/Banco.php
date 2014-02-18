@@ -25,33 +25,26 @@ class banco {
         return $conn;
     }
     
+    //metodo para criacao do Banco de Dados
     public function criandoBanco(){
         
         //Query para criar o banco de dado guaragas
-        $criando_query = "CREATE DATABASE guaragas0;";
+        $criando_query = "CREATE DATABASE guaragas;";
         
         //Executando query para inserir o registro na tabela produto
         $res = pg_query($criando_query) or die("Não foi possivel criar o banco de dados guaragas\n");
-        
-        $host = "localhost";//host
-        $nomeBD = "guaragas0";  //nome do banco de dados
-        $user = "postgres"; //usuario do banco de dados
-        $passwd = "12345678"; //senha do banco de dados
-
-        //Conectando ao banco de dados guaragas
-        $conexao = pg_connect("host=$host dbname=$nomeBD user=$user password=$passwd");
-        
-        echo "Conexao estabelecida<br>";
-        echo "Iniciando a criação da tabela administrador<br>";
-        
-        $tab_query = "CREATE TABLE pessoa ( idpessoa integer PRIMARY KEY, nome text);";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");
+    
     }
-            
+    
+    //metodo para criar a Tabela Administrador        
     public function criandoTabelaAdministrador() {
         
+        $conexao=$this->conectarBanco();
         
+        $tab_query = "CREATE TABLE administrador (nome varchar(50) PRIMARY KEY, login varchar(20) UNIQUE, senha varchar(15) NOT NULL);";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");
     }
+    
     public function criandoTabelaFuncionario() {
         
         

@@ -6,11 +6,13 @@
  */
 
 class banco {
-
+    
+    //construtor da Classe
     public function __construct() {
         $conetar=$this->conectarBanco();
     }
     
+    //metodo para connectar o Banco de Dados
     private function conectarBanco() {
         $host = "localhost"; //host
         $db = "guaragas";   //nome do banco de dados

@@ -41,7 +41,10 @@ class banco {
         
         $conexao=$this->conectarBanco();
         
-        $tab_query = "CREATE TABLE administrador (nome varchar(50) PRIMARY KEY, login varchar(20) UNIQUE, senha varchar(15) NOT NULL);";
+        $tab_query = "CREATE TABLE administrador (nome character varying(50) NOT NULL,
+                                                  login character varying(15) UNIQUE NOT NULL,
+                                                  senha character varying(15) NOT NULL,
+                                                  CONSTRAINT nome PRIMARY KEY (nome));";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Administrador\n");
     }
     

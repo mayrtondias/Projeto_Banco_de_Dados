@@ -42,11 +42,16 @@ class banco {
         $conexao=$this->conectarBanco();
         
         $tab_query = "CREATE TABLE administrador (nome varchar(50) PRIMARY KEY, login varchar(20) UNIQUE, senha varchar(15) NOT NULL);";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela ".$nomeBD."\n");
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Administrador\n");
     }
+    
     
     public function criandoTabelaFuncionario() {
         
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "CREATE TABLE funcionario (nome varchar(50) PRIMARY KEY, login varchar(20) UNIQUE, senha varchar(15) NOT NULL);";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
         
     }
     

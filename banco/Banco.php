@@ -50,7 +50,6 @@ class banco {
     
     //criando a tabela Funcionario
     public function criandoTabelaFuncionario() {
-        
         $conexao=$this->conectarBanco();
         
         $tab_query = "CREATE TABLE funcionario (cpf character varying(14) NOT NULL,
@@ -62,6 +61,7 @@ class banco {
                                                 telefone character varying(14) NOT NULL,
                                                 cargo character varying(20) NOT NULL,
                                                 CONSTRAINT cpf PRIMARY KEY (cpf));";
+        
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
         
     }
@@ -95,21 +95,19 @@ class banco {
         
     }
     
-    //criando a tabela Funcionario
-    public function criandoTabelaFuncionario() {
+    //criando a tabela Venda
+    public function criandoTabelaVenda() {
         
         $conexao=$this->conectarBanco();
         
-        $tab_query = "CREATE TABLE funcionario (cpf character varying(14) NOT NULL,
-                                                nome character varying(30) NOT NULL,
-                                                identidade character varying(15) NOT NULL,
-                                                login character varying(15) NOT NULL,
-                                                senha character varying(15) NOT NULL,
-                                                salario real NOT NULL,
-                                                telefone character varying(14) NOT NULL,
-                                                cargo character varying(20) NOT NULL,
-                                                CONSTRAINT cpf PRIMARY KEY (cpf));";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
+        $tab_query = "CREATE TABLE funcionario (data character varying(10) NOT NULL,
+                                                hora character varying(8) NOT NULL,
+                                                valor real NOT NULL,
+                                                quantidade integer NOT NULL,
+                                                codProduto integer NOT NULL,
+                                                status character varying(1) NOT NULL,
+                                                CONSTRAINT horario PRIMARY KEY (data, hora));";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Venda\n");
         
     }
     

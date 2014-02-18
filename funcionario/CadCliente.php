@@ -13,7 +13,7 @@
         <center>
             <div style="border-radius:1em; width:45%; font-size:25px; background:#3300FF;border: 30px">
                 <form action="ValidaCliente.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
+                    Informe os dos abaixo para cadastrar um novo cliente <br>
                     Nome:<br>
                     <input type="text" name="nome"><br>
                     Contato:<br>

@@ -1,5 +1,5 @@
 <?php
-    $host = "localhost";//host
+    $host = "localhost"; //host
     $db = "guaragas";  //nome do banco de dados
     $user = "postgres"; //usuario do banco de dados
     $passwd = "12345678"; //senha do banco de dados

@@ -48,12 +48,71 @@ class banco {
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Administrador\n");
     }
     
-    
+    //criando a tabela Funcionario
     public function criandoTabelaFuncionario() {
         
         $conexao=$this->conectarBanco();
         
-        $tab_query = "CREATE TABLE funcionario (nome varchar(50) PRIMARY KEY, login varchar(20) UNIQUE, senha varchar(15) NOT NULL);";
+        $tab_query = "CREATE TABLE funcionario (cpf character varying(14) NOT NULL,
+                                                nome character varying(30) NOT NULL,
+                                                identidade character varying(15) NOT NULL,
+                                                login character varying(15) NOT NULL,
+                                                senha character varying(15) NOT NULL,
+                                                salario real NOT NULL,
+                                                telefone character varying(14) NOT NULL,
+                                                cargo character varying(20) NOT NULL,
+                                                CONSTRAINT cpf PRIMARY KEY (cpf));";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
+        
+    }
+    
+    //criando a tabela Cliente
+    public function criandoTabelaCliente() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "CREATE TABLE cliente (nome character varying(30) NOT NULL,
+                                            contato character varying(14) NOT NULL,
+                                            rua character varying(50) NOT NULL,
+                                            bairro character varying(25) NOT NULL,
+                                            numero integer NOT NULL,
+                                            CONSTRAINT endereco PRIMARY KEY (rua, bairro, numero));";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Cliente\n");
+        
+    }
+    
+    //criando a tabela Funcionario
+    public function criandoTabelaFuncionario() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "CREATE TABLE funcionario (cpf character varying(14) NOT NULL,
+                                                nome character varying(30) NOT NULL,
+                                                identidade character varying(15) NOT NULL,
+                                                login character varying(15) NOT NULL,
+                                                senha character varying(15) NOT NULL,
+                                                salario real NOT NULL,
+                                                telefone character varying(14) NOT NULL,
+                                                cargo character varying(20) NOT NULL,
+                                                CONSTRAINT cpf PRIMARY KEY (cpf));";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
+        
+    }
+    
+    //criando a tabela Funcionario
+    public function criandoTabelaFuncionario() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "CREATE TABLE funcionario (cpf character varying(14) NOT NULL,
+                                                nome character varying(30) NOT NULL,
+                                                identidade character varying(15) NOT NULL,
+                                                login character varying(15) NOT NULL,
+                                                senha character varying(15) NOT NULL,
+                                                salario real NOT NULL,
+                                                telefone character varying(14) NOT NULL,
+                                                cargo character varying(20) NOT NULL,
+                                                CONSTRAINT cpf PRIMARY KEY (cpf));";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
         
     }

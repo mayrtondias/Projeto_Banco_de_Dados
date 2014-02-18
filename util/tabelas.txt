@@ -18,6 +18,7 @@ WITH (
 ALTER TABLE administrador
   OWNER TO postgres;
 
+
 -- Table: cliente
 
 -- DROP TABLE cliente;

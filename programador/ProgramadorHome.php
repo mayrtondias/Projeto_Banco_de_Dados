@@ -25,7 +25,7 @@ and open the template in the editor.
                     <button type="submit" name="selecionado" value="criarTabelas">Criar Tabelas</button>
                     <button type="submit" name="selecionado" value="detetarBanco">Detetar Banco</button>
                     <button type="submit" name="selecionado" value="detetarTabelas">Detetar Tabelas</button>
-                    <button type="submit" name="selecionado" value="inserirAdministrador">Inserir Administrador padrao</button>
+                    <button type="submit" name="selecionado" value="inserirAdministrador">Inserir Administrador padrão</button>
                 </form>
             </div>
         </center>

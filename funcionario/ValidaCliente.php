@@ -44,7 +44,7 @@
     } else if($clienteCadastrado==="t"){
         $_SESSION['erro']="6";
     } 
-    echo "----".$_SESSION['erro']."----";
+    
     if($_SESSION['erro'] === ""){
         $banco->inserirCliente($nome, $contato, $rua, $bairro, $numero);
         unset($_SESSION['erro']);

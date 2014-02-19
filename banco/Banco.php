@@ -29,7 +29,7 @@ class banco {
     public function criandoBanco(){
         
         //Query para criar o banco de dado guaragas
-        $criando_query = "CREATE DATABASE guaragas;";
+        $criando_query = "CREATE DATABASE guaragas ;";
         
         //Executando query para inserir o registro na tabela produto
         $res = pg_query($criando_query) or die("Não foi possivel criar o banco de dados guaragas\n");

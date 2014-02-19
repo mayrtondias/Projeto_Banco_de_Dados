@@ -7,7 +7,7 @@
     $selecionado=$_POST['selecionado'];
     
     if($selecionado==="criarBanco"){
-        $banco->criandoBanco("testee");
+        $banco->criandoBanco();
     }else if($selecionado==="criarTabelas"){
         $banco->criandoTabelaAdministrador();
     }else if($selecionado==="detetarBanco"){

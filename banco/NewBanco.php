@@ -1,8 +1,8 @@
 <?php
 
-/* Essa e a classe responsavel pelas principais funcoes no bando de dados de 
- * GuaraGas, ou seja, aqui se encontra os metodos para conectar ao Banco,
- * inserir, alterar e deletar elementos do Banco de Dados
+/* Essa e a classe responsavel pela criacao das tabelas que estara contida 
+ * no banco de dados GuaraGas, ou seja, aqui se encontra os metodos para 
+ * conectar ao Banco, como tambem para criacao das tabelas
  */
 
 class NewBanco {

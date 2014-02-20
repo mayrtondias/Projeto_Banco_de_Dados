@@ -1,8 +1,9 @@
 <?php
 
+    require '../banco/NewBanco.php';
     require '../banco/Banco.php';
     
-    $banco = new banco();
+    $banco = new NewBanco();
     
     $selecionado=$_POST['selecionado'];
     
@@ -10,6 +11,10 @@
         $banco->criandoBanco();
     }else if($selecionado==="criarTabelas"){
         $banco->criandoTabelaAdministrador();
+        $banco->criandoTabelaCliente();
+        $banco->criandoTabelaFuncionario();
+        $banco->criandoTabelaProduto();
+        $banco->criandoTabelaVenda();
     }else if($selecionado==="detetarBanco"){
         
     }else if($selecionado==="detetarTabelas"){

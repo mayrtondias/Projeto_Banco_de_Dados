@@ -9,7 +9,7 @@ class NewBanco {
     
     //construtor da Classe
     public function __construct() {
-        $conetar=$this->conectarBanco();
+        $conetar=$this->conectarBancoPostgres();
     }
     
     //metodo para connectar o Banco de Dados
@@ -113,7 +113,7 @@ class NewBanco {
         
         $conexao=$this->conectarBanco();
         
-        $tab_query = "CREATE TABLE funcionario (data character varying(10) NOT NULL,
+        $tab_query = "CREATE TABLE venda (data character varying(10) NOT NULL,
                                                 hora character varying(8) NOT NULL,
                                                 valor real NOT NULL,
                                                 quantidade integer NOT NULL,

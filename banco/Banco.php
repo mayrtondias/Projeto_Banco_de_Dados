@@ -5,7 +5,7 @@
  * inserir, alterar e deletar elementos do Banco de Dados
  */
 
-class banco {
+class Banco {
     
     //construtor da Classe
     public function __construct() {

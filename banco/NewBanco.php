@@ -13,9 +13,22 @@ class NewBanco {
     }
     
     //metodo para connectar o Banco de Dados
+    private function conectarBancoPostgres() {
+        $host = "localhost"; //host
+        $db = "postgres";   //nome do banco de dados
+        $user = "postgres"; //usuario do banco de dados
+        $passwd = "12345678"; //senha do banco de dados
+
+        //Conectando ao banco de dados guaragas
+        $conn = pg_connect("host=$host dbname=$db user=$user password=$passwd");
+    
+        return $conn;
+    }
+    
+    //metodo para connectar o Banco de Dados
     private function conectarBanco() {
         $host = "localhost"; //host
-        $db = "teste";   //nome do banco de dados
+        $db = "guaragas";   //nome do banco de dados
         $user = "postgres"; //usuario do banco de dados
         $passwd = "12345678"; //senha do banco de dados
 

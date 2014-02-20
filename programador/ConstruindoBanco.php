@@ -1,9 +1,9 @@
 <?php
 
     require '../banco/Banco.php';
-
-    $banco=new banco();
-
+    
+    $banco = new banco();
+    
     $selecionado=$_POST['selecionado'];
     
     if($selecionado==="criarBanco"){
@@ -20,6 +20,7 @@
         header('location:ProgramadorHome.php');
     }
     
+    header('location:../util/Sucesso.php');
     
     
 ?>

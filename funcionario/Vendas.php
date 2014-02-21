@@ -21,7 +21,7 @@
                             $tipo=(int)$_SESSION['erro'];
                             switch ($tipo){
                                 case 1:
-                                    $men="O campo nome não deve ficar em branco<br>nem superior a 30 caracteres<br>";
+                                    $men="O campo nome não deve ficar em branco<br>nem superior a 30 caracteres.<br>";
                                     break;
                                 default :
                                     $men="";

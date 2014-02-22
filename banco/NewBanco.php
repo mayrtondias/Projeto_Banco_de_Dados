@@ -2,7 +2,7 @@
 
 /* Essa e a classe responsavel pela criacao das tabelas que estara contida 
  * no banco de dados GuaraGas, ou seja, aqui se encontra os metodos para 
- * conectar ao Banco, como tambem para criacao das tabelas
+ * conectar ao Banco, como tambem para criacao das tabelas.
  */
 
 class NewBanco {
@@ -14,10 +14,10 @@ class NewBanco {
     
     //metodo para connectar o Banco de Dados
     private function conectarBancoPostgres() {
-        $host = "localhost"; //host
-        $db = "postgres";   //nome do banco de dados
-        $user = "postgres"; //usuario do banco de dados
-        $passwd = "12345678"; //senha do banco de dados
+        $host = "localhost";    //host
+        $db = "postgres";       //nome do banco de dados
+        $user = "postgres";     //usuario do banco de dados
+        $passwd = "12345678";   //senha do banco de dados
 
         //Conectando ao banco de dados guaragas
         $conn = pg_connect("host=$host dbname=$db user=$user password=$passwd");
@@ -27,10 +27,10 @@ class NewBanco {
     
     //metodo para connectar o Banco de Dados
     private function conectarBanco() {
-        $host = "localhost"; //host
-        $db = "guaragas";   //nome do banco de dados
-        $user = "postgres"; //usuario do banco de dados
-        $passwd = "12345678"; //senha do banco de dados
+        $host = "localhost";    //host
+        $db = "guaragas";       //nome do banco de dados
+        $user = "postgres";     //usuario do banco de dados
+        $passwd = "12345678";   //senha do banco de dados
 
         //Conectando ao banco de dados guaragas
         $conn = pg_connect("host=$host dbname=$db user=$user password=$passwd");

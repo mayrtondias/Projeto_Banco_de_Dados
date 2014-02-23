@@ -103,7 +103,9 @@ class NewBanco {
                                             valor real NOT NULL,
                                             quantidade integer NOT NULL,
                                             codProduto integer NOT NULL,
-                                            CONSTRAINT codigoProduto PRIMARY KEY (codProduto));";
+                                            CONSTRAINT codigoProduto PRIMARY KEY (codProduto),
+                                            CONSTRAINT ck_qtde CHECK (quantidade >=0),
+                                            CONSTRAINT ck_valor CHECK (valor >= 0 ));";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Produto\n");
         
     }
@@ -119,6 +121,7 @@ class NewBanco {
                                                 quantidade integer NOT NULL,
                                                 codProduto integer NOT NULL,
                                                 status character varying(1) NOT NULL,
+                                                CONSTRAINT ck_valor CHECK (valor >=0),
                                                 CONSTRAINT horario PRIMARY KEY (data, hora));";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Venda\n");
         

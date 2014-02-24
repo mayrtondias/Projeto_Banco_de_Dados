@@ -16,7 +16,7 @@
                     
                     <label style="color:red; font-family:arial; text-decoration:none; padding:5px; font-size: 14px">
                         
-                        <b>Atenção: Não foi possivel validar seu acesso!
+                        <b>Atenção: Não foi possível validar seu acesso!
                         Caso você seja um usuario cadastrado verifique seu Login e Senha,
                         Caso contrário, entre em contato com o Administrador.
                         </b>

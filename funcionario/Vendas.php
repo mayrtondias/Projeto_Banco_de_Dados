@@ -29,6 +29,7 @@
                             echo $men;
                         }
                     ?>
+                    
                     <input type="submit" value="Pesquisar">
                 </form>
             </div>

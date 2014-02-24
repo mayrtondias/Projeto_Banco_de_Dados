@@ -11,7 +11,7 @@
         ?>
         
         <center>
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px">
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF; border: 30px">
                 <form action="vendaPesquisarClienteNome.php" method="post">
                     
                     Pesquisar por nome: <br>

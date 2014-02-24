@@ -17,7 +17,6 @@
                         <td>Contato</td>
                         <td>Selecionar</td>
                     </tr>
-
                 <?php
 
                     require '../banco/Banco.php';

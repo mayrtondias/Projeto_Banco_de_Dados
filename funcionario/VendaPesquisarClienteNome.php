@@ -8,7 +8,7 @@
 
     <body>
         <div>
-            <form method="POST" action="selecionarProduto.php" onsubmit="return confirm('Voce tem certeza? ');">
+            <form method="POST" action="selecionarProduto.php" onsubmit="return confirm('Voce tem certeza?');">
                 <table>
                     <tr>
                         <td>Rua</td>

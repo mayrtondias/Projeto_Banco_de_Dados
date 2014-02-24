@@ -18,7 +18,7 @@
                         
                         <b>Atenção: Não foi possivel validar seu acesso!
                         Caso você seja um usuario cadastrado verifique seu Login e Senha,
-                        Caso contrario, entre em contato com o Administrador.
+                        Caso contrário, entre em contato com o Administrador.
                         </b>
                     </label><br>
                     <input type="submit" value="Entrar">

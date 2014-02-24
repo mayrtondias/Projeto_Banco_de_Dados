@@ -11,9 +11,9 @@
             require 'MenuAdministrador.php';
         ?>
         <center>
-        <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px">
-            <form method="POST" action="HomeAdminList.php" >
-                <?php
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px">
+                <form method="POST" action="HomeAdminList.php" >
+                    <?php
 
                     require '../banco/Banco.php';
 

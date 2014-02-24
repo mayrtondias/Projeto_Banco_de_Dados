@@ -10,6 +10,7 @@
         <?php
             require 'MenuAdministrador.php';
         ?>
+        
         <center>
             <div>
                 <form action="ValidaProduto.php" method="post">

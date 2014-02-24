@@ -5,7 +5,7 @@
         header('location: ../util/desconectado.php');
     }
 ?>
-    <div  style="border-radius:1em; width:20%; font-size:25px; background:#3399FF;float: left">  
+    <div  style="border-radius:1em; width:20%; font-size:25px; background:#3399FF; float: left">  
         <center>
             <a href="Home.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Home         </b></a><br><hr>
             <a href="Vendas.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Realizar Vendas         </b></a><br><hr>

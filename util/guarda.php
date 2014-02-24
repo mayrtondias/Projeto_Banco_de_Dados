@@ -22,7 +22,8 @@
     //Executando query para listar os registros da tabela
     $res = pg_query($conn, $show_query) or die("Nao foi possivel executar a query: $reg_query\n");
 
-    //Exibindo dados
+    
+//Exibindo dados
     while ($linha = pg_fetch_row($res)) {
         foreach($linha as $dado)
         echo $dado . "\n";

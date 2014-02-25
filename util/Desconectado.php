@@ -9,7 +9,7 @@
         <center>
             <div  style="border-radius:1em; width:50%; font-size:19px; background:#99CCFF;color:white" >
                 <center>
-                    <h1>Sua sessão expirou!</h1>
+                    <h1>Sua sessão expirou! </h1>
                 </center>
             </div>
             <br>

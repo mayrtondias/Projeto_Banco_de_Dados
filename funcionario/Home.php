@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>GuaraGas</title>
+        <title>GuaraGas </title>
     </head>
      
     <body>

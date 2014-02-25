@@ -38,6 +38,7 @@ WITH (
 ALTER TABLE cliente
   OWNER TO postgres;
 
+
 -- Table: funcionario
 
 -- DROP TABLE funcionario;

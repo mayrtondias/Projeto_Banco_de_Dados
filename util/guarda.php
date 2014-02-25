@@ -1,8 +1,8 @@
 <?php
     
     $host = "localhost"; //host
-    $db = "guaragas";  //nome do banco de dados
-    $user = "postgres"; //usuario do banco de dados
+    $db = "guaragas";    //nome do banco de dados
+    $user = "postgres";  //usuario do banco de dados
     $passwd = "12345678"; //senha do banco de dados
 
     //Conectando ao banco de dados utilizando a funcao pg_connect

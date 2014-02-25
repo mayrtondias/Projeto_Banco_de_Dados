@@ -18,7 +18,7 @@
                 $men="A decidir.";
                 break;
             case 3:
-                $men="A decidir";
+                $men="A decidir.";
                 break;
             default :
                 $men=" ";

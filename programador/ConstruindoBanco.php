@@ -16,7 +16,7 @@
         $banco->criandoTabelaProduto();
         $banco->criandoTabelaVenda();
     }else if($selecionado==="detetarBanco"){
-        
+        $banco->apagarBanco();
     }else if($selecionado==="detetarTabelas"){
         
     }else if($selecionado==="inserirAdministrador"){

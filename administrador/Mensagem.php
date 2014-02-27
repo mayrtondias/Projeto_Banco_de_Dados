@@ -15,7 +15,7 @@
                 $men="Cadastro feito com Sucesso!";
                 break;
             case 2:
-                $men="A decidir";
+                $men="A decidir.";
                 break;
             case 3:
                 $men="A decidir";

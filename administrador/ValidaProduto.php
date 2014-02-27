@@ -1,7 +1,7 @@
 <?php
     
     require '../banco/banco.php';
-    
+     
     $banco=new banco();
     session_start();
     

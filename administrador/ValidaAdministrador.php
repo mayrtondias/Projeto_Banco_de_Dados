@@ -21,7 +21,7 @@
     $resultado=$banco->pesquisar($pesquisa, $tabela);
 
     if($resultado==NULL){
-        echo "Problema na pesquisa<br>";
+        echo "Problema na pesquisa.<br>";
     } else{
           while($registro = pg_fetch_array($resultado)){
               if($registro['login']===$rua){

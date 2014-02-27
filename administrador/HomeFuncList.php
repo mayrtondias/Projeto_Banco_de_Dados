@@ -11,7 +11,7 @@
             require 'MenuAdministrador.php';
         ?>
         
-        <div style="border-radius:1em; width:75%; font-size:25px; background:#3300FF;border: 30px; float: left; margin: 10px; margin-left: 25px">
+        <div style="border-radius:1em; width:75%; font-size:25px; background:#3300FF; border: 30px; float: left; margin: 10px; margin-left: 25px">
             <center>
             <form method="POST" action="HomeAdminList.php" >
                 <?php

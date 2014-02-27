@@ -9,7 +9,7 @@
         <center>
             <a href="Home.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Home </b></a><br><hr>
             <a href="HomeAdmin.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Cadastrar Administrador </b></a><br><hr>
-            <a href="HomeFunc.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Gerenciar Funcionario </b></a><br><hr>
+            <a href="HomeFunc.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Gerenciar Funcionário </b></a><br><hr>
             <a href="HomeEstoque.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Estoque </b></a><br><hr>
             <a href="HomeFinancas.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Finanças </b></a><br><hr>
             <a href="../util/sair.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Sair </b></a><br>

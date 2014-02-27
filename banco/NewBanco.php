@@ -126,4 +126,13 @@ class NewBanco {
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Venda\n");
         
     }
+    
+    public function apagarBanco(){
+        
+        //Query para criar o banco de dado guaragas
+        $criando_query = "DROP DATABASE guaragas ;";
+        
+        //Executando query para inserir o registro na tabela produto
+        $res = pg_query($criando_query) or die("Não foi possivel apagar o banco de dados guaragas\n");
+    }
 }

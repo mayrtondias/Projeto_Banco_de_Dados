@@ -28,7 +28,10 @@
             $resultado=$banco->pesquisar($pesquisa, $tabela);
 
             if($resultado==NULL){
-                echo "Problema com a pesquisa! ".pg_errormessage();
+                //echo "Problema com a pesquisa! ".pg_errormessage();
+                $_SESSION['login']="erro";
+                $_SESSION['senha']="erro";
+                header('location: indexErro.php');
             } else{
                 while($registro = pg_fetch_array($resultado)){
                     
@@ -45,7 +48,10 @@
             $resultado=$banco->pesquisar($pesquisa, $tabela);
 
             if($resultado==NULL){
-                echo "Problema com a pesquisa! ".pg_errormessage();
+                //echo "Problema com a pesquisa! ".pg_errormessage();
+                $_SESSION['login']="erro";
+                $_SESSION['senha']="erro";
+                header('location: indexErro.php');
             } else{
                 while($registro = pg_fetch_array($resultado)){
                     

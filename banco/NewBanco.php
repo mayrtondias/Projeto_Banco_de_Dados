@@ -149,8 +149,6 @@ class NewBanco {
         
     }
     
-    
-    
     //criando a tabela Venda
     public function criandoTabelaVenda() {
         
@@ -165,6 +163,16 @@ class NewBanco {
                                                 CONSTRAINT ck_valor CHECK (valor >=0),
                                                 CONSTRAINT horario PRIMARY KEY (data, hora));";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Venda\n");
+        
+    }
+    
+    //apagando a tabela Venda
+    public function apagarTabelaVenda() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "DROP TABLE venda;";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Venda\n");
         
     }
     

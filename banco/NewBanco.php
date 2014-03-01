@@ -88,6 +88,16 @@ class NewBanco {
         
     }
     
+    //apagando a tabela Funcionario
+    public function apagarTabelaFuncionario() {
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "DROP TABLE funcionario ;";
+        
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Funcionario\n");
+        
+    }
+    
     //criando a tabela Cliente
     public function criandoTabelaCliente() {
         

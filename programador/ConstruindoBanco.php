@@ -20,7 +20,8 @@
     }else if($selecionado==="detetarTabelas"){
         
     }else if($selecionado==="inserirAdministrador"){
-        
+        $banco = new Banco();
+        $banco->inserirAdministrador("Administrador", "admin", "12345678");
     }else{
         header('location:ProgramadorHome.php');
     }

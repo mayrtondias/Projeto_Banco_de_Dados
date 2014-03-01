@@ -61,6 +61,15 @@ class NewBanco {
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Administrador\n");
     }
     
+    //metodo para apagar a Tabela Administrador        
+    public function apagarTabelaAdministrador() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "DROP TABLE administrador;";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Administrador\n");
+    }
+    
     //criando a tabela Funcionario
     public function criandoTabelaFuncionario() {
         $conexao=$this->conectarBanco();
@@ -135,4 +144,6 @@ class NewBanco {
         //Executando query para inserir o registro na tabela produto
         $res = pg_query($criando_query) or die("Não foi possivel apagar o banco de dados guaragas\n");
     }
+    
+    
 }

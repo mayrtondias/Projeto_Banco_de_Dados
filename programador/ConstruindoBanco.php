@@ -18,7 +18,11 @@
     }else if($selecionado==="detetarBanco"){
         $banco->apagarBanco();
     }else if($selecionado==="detetarTabelas"){
-        
+        $banco->apagarTabelaAdministrador();
+        $banco->apagarTabelaCliente();
+        $banco->apagarTabelaFuncionario();
+        $banco->apagarTabelaProduto();
+        $banco->apagarTabelaVenda();
     }else if($selecionado==="inserirAdministrador"){
         $banco = new Banco();
         $banco->inserirAdministrador("Administrador", "admin", "12345678");

@@ -139,6 +139,18 @@ class NewBanco {
         
     }
     
+    //apagando a tabela Produto
+    public function apagarTabelaProduto() {
+        
+        $conexao=$this->conectarBanco();
+        
+        $tab_query = "DROP TABLE produto ;";
+        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Produto\n");
+        
+    }
+    
+    
+    
     //criando a tabela Venda
     public function criandoTabelaVenda() {
         

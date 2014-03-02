@@ -1,8 +1,8 @@
 <?php
 
-/* Essa e a classe responsavel pela criacao das tabelas que estara contida 
- * no banco de dados GuaraGas, ou seja, aqui se encontra os metodos para 
- * conectar ao Banco, como tambem para criacao das tabelas.
+/* Essa e a classe responsavel pela criacao  e remocao das tabelas que 
+ * estara contida no banco de dados GuaraGas, ou seja, aqui se encontra 
+ * os metodos para conectar ao Banco, como tambem para criacao das tabelas.
  */
 
 class NewBanco {

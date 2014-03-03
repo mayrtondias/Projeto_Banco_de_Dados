@@ -57,7 +57,9 @@ class NewBanco {
         $tab_query = "CREATE TABLE administrador (nome character varying(50) NOT NULL,
                                                   login character varying(15) UNIQUE NOT NULL,
                                                   senha character varying(15) NOT NULL,
-                                                  CONSTRAINT nome PRIMARY KEY (nome));";
+                                                  CONSTRAINT nome PRIMARY KEY (nome),
+                                                  UNIQUE (login)
+                                                  );";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Administrador\n");
     }
     
@@ -82,7 +84,9 @@ class NewBanco {
                                                 salario real NOT NULL,
                                                 telefone character varying(14) NOT NULL,
                                                 cargo character varying(20) NOT NULL,
-                                                CONSTRAINT cpf PRIMARY KEY (cpf));";
+                                                CONSTRAINT cpf PRIMARY KEY (cpf),
+                                                UNIQUE (login)
+                                                );";
         
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Funcionario\n");
         
@@ -108,7 +112,8 @@ class NewBanco {
                                             rua character varying(50) NOT NULL,
                                             bairro character varying(25) NOT NULL,
                                             numero integer NOT NULL,
-                                            CONSTRAINT endereco PRIMARY KEY (rua, bairro, numero));";
+                                            CONSTRAINT endereco PRIMARY KEY (rua, bairro, numero)
+                                            );";
         $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Cliente\n");
         
     }
@@ -158,7 +163,7 @@ class NewBanco {
                                                 hora character varying(8) NOT NULL,
                                                 valor real NOT NULL,
                                                 quantidade integer NOT NULL,
-                                                codProduto integer NOT NULL,
+                                                codProduto integer NOT NULL REFERENCES produto(codProduto) ON DELETE CASCADE,
                                                 status character varying(1) NOT NULL,
                                                 CONSTRAINT ck_valor CHECK (valor >=0),
                                                 CONSTRAINT horario PRIMARY KEY (data, hora));";

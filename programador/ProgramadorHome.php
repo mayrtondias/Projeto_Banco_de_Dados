@@ -11,7 +11,6 @@
             <div  style="border-radius:1em; width:20%; font-size:25px; background:#3399FF">
                 <?php
                     session_start();
-
                     if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
                         header('location:../util/Desconectado.php');
                     }

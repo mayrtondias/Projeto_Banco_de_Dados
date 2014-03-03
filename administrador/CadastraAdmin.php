@@ -21,7 +21,7 @@
                     Login:<br>
                     <input type="text" name="login"><br>
                     Senha:<br>
-                    <input type="text" name="senha"><br>
+                    <input type="password" name="senha"><br>
                     <?php
                         if(isset($_SESSION['erro'])==TRUE){
                             $tipo=(int)$_SESSION['erro'];

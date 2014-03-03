@@ -16,22 +16,13 @@
             $_SESSION['login']="";
             $_SESSION['senha']="";
             
-            if(($login==="prog")&&($senha==="123")){
-                $_SESSION['login']=$login;
-                $_SESSION['senha']=$senha;
-                header('location: ../programador/ProgramadorHome.php');
-            }
-            
             $tabela="administrador";
             $pesquisa="*";
             
             $resultado=$banco->pesquisar($pesquisa, $tabela);
 
             if($resultado==NULL){
-                //echo "Problema com a pesquisa! ".pg_errormessage();
-                $_SESSION['login']="erro";
-                $_SESSION['senha']="erro";
-                header('location: indexErro.php');
+                echo "Problema com a pesquisa! ".pg_errormessage();
             } else{
                 while($registro = pg_fetch_array($resultado)){
                     
@@ -48,10 +39,7 @@
             $resultado=$banco->pesquisar($pesquisa, $tabela);
 
             if($resultado==NULL){
-                //echo "Problema com a pesquisa! ".pg_errormessage();
-                $_SESSION['login']="erro";
-                $_SESSION['senha']="erro";
-                header('location: indexErro.php');
+                echo "Problema com a pesquisa! ".pg_errormessage();
             } else{
                 while($registro = pg_fetch_array($resultado)){
                     

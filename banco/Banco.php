@@ -100,7 +100,31 @@ class Banco {
         return $res;
     }
     
+    public function copiarArquivo($caminho, $tabela){
+        
+        $conexao=$this->conectarBanco();
+        
+        //Query para listar registros da tabela
+        $show_query = "COPY $tabela FROM ´$caminho´;";
+        
+        //Executando query para listar os registros da tabela
+        $res = pg_query($conexao, $show_query) or die("Nao foi possivel copiar o conteudo da $tabela .!\n");
+        
+        return $res;
+    }
     
     
+    public function deletar($tabela, $clausuraWere){
+        
+        $conexao=$this->conectarBanco();
+        
+        //Query para listar registros da tabela
+        $show_query = "DELETE FROM $tabela WHERE $clausuraWere;";
+        
+        //Executando query para listar os registros da tabela
+        $res = pg_query($conexao, $show_query) or die("Nao foi possivel deletar a informacao de $tabela .!\n");
+        
+        return $res;
+    }
 }
 

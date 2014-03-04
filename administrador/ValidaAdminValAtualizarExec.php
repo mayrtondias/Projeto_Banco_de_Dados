@@ -12,40 +12,53 @@
     $nome = $_POST['nome'];      
     $login = $_POST['login'];
     $senha = $_POST['senha'];      
-    $administradorCadastrado="f";
     $_SESSION['erro']="";
     
+    
     $tabela="administrador";
-    $pesquisa="*";
-
-    $resultado=$banco->pesquisar($pesquisa, $tabela);
-
-    if($resultado==NULL){
-        echo "Problema na pesquisa.<br>";
-    } else{
-          while($registro = pg_fetch_array($resultado)){
-              if($registro['login']===$nome){
-                  $administradorCadastrado="t";
-              }
-          }
-     }
- 
+    
     if(($nome==="")||(strlen($nome)>50)){
         $_SESSION['erro']="1";
     } else if(($login==="")||(strlen($login)>15)){
         $_SESSION['erro']="2";
     } else if(($senha==="")||(strlen($senha)>15)||(strlen($senha)<8)){
         $_SESSION['erro']="3";
-    } else if($clienteCadastrado==="t"){
-        $_SESSION['erro']="4";
-    } 
+    }  
     
     if($_SESSION['erro'] === ""){
-        $banco->inserirAdministrador($nome, $login, $senha);
-        $banco->update($tabela, $clausuraSET, $clausuraWere);
-        unset($_SESSION['erro']);
-        $_SESSION['mensagem']="3";
-        header('location: mensagem.php');
+        
+        $nomeAtual=$_SESSION['atualNome'];
+        $clausuraWere="nome = '$nomeAtual'";
+
+        if($nome!==$_SESSION['atualNome']){
+            $clausuraSET="nome = '$nome' ";
+            $resultado=$banco->update($tabela, $clausuraSET, $clausuraWere);
+            if($resultado==NULL)$_SESSION['erro']="30";
+        }
+        
+        $clausuraWere="nome = '$nome'";
+        if($login!==$_SESSION['atualLogin']){
+            $clausuraSET="login = '$login' ";
+            $resultado=$banco->update($tabela, $clausuraSET, $clausuraWere);
+            if($resultado==NULL)$_SESSION['erro']="31";
+        }
+
+        if($senha!==$_SESSION['atualSenha']){
+            $clausuraSET="senha = '$senha' ";
+            $resultado=$banco->update($tabela, $clausuraSET, $clausuraWere);
+            if($resultado==NULL)$_SESSION['erro']="32";
+        }
+        
+        if($_SESSION['erro'] === ""){
+            unset($_SESSION['erro']);
+            unset($_SESSION['atualNome']);
+            unset($_SESSION['atualLogin']);
+            unset($_SESSION['atualSenha']);
+            $_SESSION['mensagem']="3";
+            header('location: mensagem.php');
+        }else{
+            header('location: HomeAdminValAtualizar.php');
+        }
     }else{
         header('location: HomeAdminValAtualizar.php');
     }

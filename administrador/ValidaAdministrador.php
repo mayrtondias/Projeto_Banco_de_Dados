@@ -1,6 +1,6 @@
 <?php
     
-    require '../banco/banco.php';
+    require '../banco/Banco.php';
     
     $banco=new banco();
     session_start();
@@ -24,7 +24,7 @@
         echo "Problema na pesquisa.<br>";
     } else{
           while($registro = pg_fetch_array($resultado)){
-              if($registro['login']===$rua){
+              if($registro['login']===$nome){
                   $administradorCadastrado="t";
               }
           }

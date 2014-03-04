@@ -8,7 +8,7 @@
     <div style="border-radius:1em; width:20%; font-size:25px; background:#3399FF;float: left">
         <center>
             <a href="Home.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Home </b></a><br><hr>
-            <a href="HomeAdmin.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Cadastrar Administrador </b></a><br><hr>
+            <a href="HomeAdmin.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Gerenciar Administrador </b></a><br><hr>
             <a href="HomeFunc.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Gerenciar Funcionário </b></a><br><hr>
             <a href="HomeEstoque.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Estoque </b></a><br><hr>
             <a href="HomeFinancas.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b> Finanças </b></a><br><hr>

@@ -17,8 +17,8 @@
                 <center>
                     <a href="CadastraAdmin.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Cadastrar Administrador         </b></a><br><hr>
                     <a href="HomeAdminList.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Listar Administradores         </b></a><br><hr>
-                    <a href="HomeFuncDelete.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Excluir Administrador         </b></a><br><hr>
-                    <a href="HomeEstoqueAtualizar.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Atualizar Conta        </b></a>
+                    <a href="HomeAdminAtualizar.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Atualizar Conta        </b></a><br><hr>
+                    <a href="HomeAdminDelete.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Excluir Administrador         </b></a>
                 </center>
             </div>
         </center>

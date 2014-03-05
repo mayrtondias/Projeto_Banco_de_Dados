@@ -13,7 +13,7 @@
         
         <div style="border-radius:1em; width:75%; font-size:25px; background:#3300FF; border: 30px; float: left; margin: 10px; margin-left: 25px">
             <center>
-            <form method="POST" action="HomeAdminList.php" >
+                <form method="POST" action="HomeFuncList.php" >
                 <?php
 
                     require '../banco/Banco.php';
@@ -42,7 +42,7 @@
                         <td>Identidade</td>
                         <td>CPF</td>
                         <td>Telefone</td>
-                        <td>Carga</td>
+                        <td>Cargo</td>
                     </tr>
                         <?php
                         $contador=1;

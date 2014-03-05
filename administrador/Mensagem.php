@@ -35,6 +35,11 @@
                             <a href="HomeAdminAtualizar.php" style="border-radius:1em;color:#FFFFFF; font-family:arial; text-decoration:none; padding:5px;background:#1C86EE"><b>OK</b></a>
                         <?php
                         break;
+                    case 4:
+                        ?>
+                            <a href="HomeFuncDelete.php" style="border-radius:1em;color:#FFFFFF; font-family:arial; text-decoration:none; padding:5px;background:#1C86EE"><b>OK</b></a>
+                        <?php
+                        break;
                     default :
                         ?>
                             <a href="Home.php" style="border-radius:1em;color:#FFFFFF; font-family:arial; text-decoration:none; padding:5px;background:#1C86EE"><b>OK</b></a>

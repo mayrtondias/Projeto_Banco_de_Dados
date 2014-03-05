@@ -12,7 +12,7 @@
         ?>
         
         <center>
-            <div>
+            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF; border: 30px">
                 <form action="ValidaAdministrador.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente<br>
                     Nome:<br>
@@ -35,7 +35,10 @@
                                     $men="O campo da senha não deve ficar em branco<br>nem superior a 15 caracteres.<br>";
                                     break;
                                 case 4:
-                                    $men="Administrador ja cadastrado no sistema<br>";
+                                    $men="Administrador ja cadastrado no sistema.<br>";
+                                    break;
+                                case 5:
+                                    $men="Usuario ja cadastrado no sistema, modifique o Login.<br>";
                                     break;
                                 default :
                                     $men="";

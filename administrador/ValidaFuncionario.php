@@ -17,7 +17,9 @@
     $salario = $_POST['salario'];
     $telefone = $_POST['telefone'];
     $cargo = $_POST['cargo'];
+    $usuarioCadastrado="f";
     $funcionarioCadastrado="f";
+    $cpfCadastrado="f";
     $_SESSION['erro']="";
     
     $tabela="funcionario";
@@ -29,34 +31,56 @@
         echo "Problema na pesquisa.<br>";
     } else{
           while($registro = pg_fetch_array($resultado)){
-              if(($registro['cpf']===$cpf)||($registro['login']===$login)){
-                  $produtoCadastrado="t";
+              if($registro['cpf']===$cpf){
+                  $cpfCadastrado="t";
+              }
+              if($registro['login']===$login){
+                  $funcionarioCadastrado="t";
+              }
+          }
+     }
+     
+    $tabela="administrador";
+    $pesquisa="*";
+
+    $resultado=$banco->pesquisar($pesquisa, $tabela);
+
+    if($resultado==NULL){
+        echo "Problema na pesquisa.<br>";
+    } else{
+          while($registro = pg_fetch_array($resultado)){
+              if($registro['login']===$login){
+                  $usuarioCadastrado="t";
               }
           }
      }
  
     if(($nome==="")||(strlen($nome)>30)){
         $_SESSION['erro']="1";
-    } else if(($login===NULL)||(strlen($login)>15)){////////////////////////////////////////////////////////////////////////////////////////////////
+    } else if(($login==="")||(strlen($login)>15)){
         $_SESSION['erro']="2";
-    } else if(($senha===NULL)||(strlen($senha)>15)){
+    } else if(($senha==="")||(strlen($senha)>15)){
         $_SESSION['erro']="3";
-    } else if(($identidade===NULL)||(strlen($identidade)>15)){
+    } else if(($identidade==="")||(strlen($identidade)>15)){
         $_SESSION['erro']="4";
-    } else if(($cpf===NULL)||(strlen($cpf)>14)){
+    } else if(($cpf==="")||(strlen($cpf)>14)){
         $_SESSION['erro']="5";
-    } else if(($salario===NULL)||($salario<0)){
+    } else if(($salario==="")||(((float)$salario)<0)){
         $_SESSION['erro']="6";
-    } else if(($telefone===NULL)||(strlen($telefone)>14)){
+    } else if(($telefone==="")||(strlen($telefone)>14)){
         $_SESSION['erro']="7";
-    } else if(($cargo===NULL)||(strlen($cargo)>20)){
+    } else if(($cargo==="")||(strlen($cargo)>20)){
         $_SESSION['erro']="8";
     } else if($funcionarioCadastrado==="t"){
         $_SESSION['erro']="9";
+    } else if($usuarioCadastrado==="t"){
+        $_SESSION['erro']="10";
+    } else if($cpfCadastrado==="t"){
+        $_SESSION['erro']="11";
     }
     
     if($_SESSION['erro'] === ""){
-        $banco->inserirFuncionario($cpf, $nome, $identidade, $login, $senha, $salario, $telefone, $cargo);
+        $banco->inserirFuncionario($cpf, $nome, $identidade, $login, $senha, (float)$salario, $telefone, $cargo);
         unset($_SESSION['erro']);
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');

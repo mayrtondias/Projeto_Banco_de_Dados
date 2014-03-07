@@ -111,7 +111,7 @@
                                     $men="Aconteceu um erro, digite a senha novamente!<br>";
                                     break;
                                 default :
-                                    $men="";
+                                    $men=" ";
                             }
                             echo $men;
                         }

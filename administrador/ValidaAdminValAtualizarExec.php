@@ -25,6 +25,7 @@
         $_SESSION['erro']="3";
     }  
     
+    
     if($_SESSION['erro'] === ""){
         
         $nomeAtual=$_SESSION['atualNome'];

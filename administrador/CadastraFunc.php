@@ -69,7 +69,7 @@
                                     $men="O CPF desse funcionario ja esta cadastrado no sistema,<br>Informe um CPF distinto.<br>";
                                     break;
                                 default :
-                                    $men="";
+                                    $men=" ";
                             }
                             echo $men;
                         }

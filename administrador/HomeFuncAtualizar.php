@@ -93,8 +93,8 @@
                               <?php
                           }
                  ?>
-             </form>
-        </div>
-            </center>
+                </form>
+            </div>
+        </center>
     </body>
 </html>

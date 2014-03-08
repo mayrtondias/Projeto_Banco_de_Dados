@@ -9,9 +9,9 @@
         header('location: ../util/desconectado.php');
     }
             
-    $nome = $_POST['nome'];      
+    $nome = $_POST['nome'];
     $login = $_POST['login'];
-    $senha = $_POST['senha'];      
+    $senha = $_POST['senha'];
     $_SESSION['erro']="";
     
     
@@ -23,7 +23,7 @@
         $_SESSION['erro']="2";
     } else if(($senha==="")||(strlen($senha)>15)||(strlen($senha)<8)){
         $_SESSION['erro']="3";
-    }  
+    }
     
     
     if($_SESSION['erro'] === ""){

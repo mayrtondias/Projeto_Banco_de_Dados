@@ -133,7 +133,7 @@ class Banco {
         $conexao=$this->conectarBanco();
         
         //Query para listar registros da tabela
-        $show_query = "UPDATE $tabela SET $clausuraSET WHERE $clausuraWere;";
+        $show_query = "UPDATE $tabela SET $clausuraSET WHERE $clausuraWere";
         
         //Executando query para listar os registros da tabela
         $res = pg_query($conexao, $show_query) or die("Nao foi possivel atualizar a informacao de $tabela .!\n");

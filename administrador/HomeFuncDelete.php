@@ -45,7 +45,7 @@
                         <td>Excluir</td>
                     </tr>
                         <?php
-                        $contador=1;
+                        $contador=0;
                         if( isset($_POST['selecionado'])==false){
                             $qtdeResult=0;
                         }else if(($_POST['selecionado']==="anterior")||($qtdeResult>1)){
@@ -59,7 +59,7 @@
                             if(($contador>=($qtdeResult*10))&&($contador<($qtdeResult*10+10))){
                                   ?>
                                   <tr>
-                                    <td><?php echo $contador; ?></td>
+                                    <td><?php echo ($contador+1); ?></td>
                                     <td><?php echo $registro['nome']; ?></td>
                                     <td><?php echo $registro['login']; ?></td>
                                     <td><?php echo $registro['identidade']; ?></td>

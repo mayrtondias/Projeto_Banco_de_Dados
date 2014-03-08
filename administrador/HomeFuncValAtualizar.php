@@ -17,7 +17,7 @@
                 header('location: ../util/desconectado.php');
             }
             
-            $banco=new banco();
+            $banco=new Banco();
             
             $chave= $_POST['chave'];
             $tabela="funcionario";
@@ -29,7 +29,7 @@
                 echo "Problema na pesquisa.<br>";
             }else{
                 while($registro = pg_fetch_array($resultado)){
-                    if($registro['nome']===$chave){
+                    if($registro['cpf']===$chave){
                         $_SESSION['atualNome']=$registro['nome'];
                         $_SESSION['atualLogin']=$registro['login'];
                         $_SESSION['atualCpf']=$registro['cpf'];

@@ -11,13 +11,13 @@
             require 'MenuAdministrador.php';
         ?>
         <center>
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF; border: 30px">
+            <div style="border-radius:1em; width:75%; font-size:25px; background:#3300FF; border: 30px; float: left; margin: 10px; margin-left: 25px">
                 <form method="POST" action="HomeFuncValAtualizar.php" >
                     <?php
 
                     require '../banco/Banco.php';
 
-                    $banco=new banco();
+                    $banco=new Banco();
                     session_start();
 
                     if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
@@ -45,7 +45,7 @@
                         <td>Atualizar</td>
                     </tr>
                         <?php
-                        $contador=1;
+                        $contador=0;
                         if( isset($_POST['selecionado'])==false){
                             $qtdeResult=0;
                         }else if(($_POST['selecionado']==="anterior")||($qtdeResult>1)){
@@ -59,7 +59,7 @@
                             if(($contador>=($qtdeResult*10))&&($contador<($qtdeResult*10+10))){
                                   ?>
                                   <tr>
-                                    <td><?php echo $contador; ?></td>
+                                    <td><?php echo ($contador+1); ?></td>
                                     <td><?php echo $registro['nome']; ?></td>
                                     <td><?php echo $registro['login']; ?></td>
                                     <td><?php echo $registro['identidade']; ?></td>

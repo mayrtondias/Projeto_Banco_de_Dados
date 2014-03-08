@@ -1,15 +1,14 @@
 <?php
-    echo "passouuuu";
+
     require '../banco/Banco.php';
-    echo "passouuuiu";
-    session_start();
-    echo "passouuouu";
+
+    session_start();;
     $banco=new Banco();
-    echo "passouuuup";
+
     if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
         header('location: ../util/desconectado.php');
     }
-echo "passouuuu";
+
     $nome = $_POST['nome'];
     $login = $_POST['login'];
     $senha = $_POST['senha'];
@@ -25,19 +24,25 @@ echo "passouuuu";
     
     $tabela="funcionario";
     $pesquisa="*";
-echo "passou";
+
     $resultado=$banco->pesquisar($pesquisa, $tabela);
 
     if($resultado==NULL){
         echo "Problema na pesquisa.<br>";
     } else{
           while($registro = pg_fetch_array($resultado)){
-              if($registro['cpf']===$cpf){
-                  $cpfCadastrado="t";
+              if($_SESSION['atualLogin']!==$login){
+                  if($registro['login']===$login){
+                      $funcionarioCadastrado="t";
+                  }
               }
-              if($registro['login']===$login){
-                  $funcionarioCadastrado="t";
+              
+              if($_SESSION['atualCpf']!==$cpf){
+                  if($registro['cpf']===$cpf){
+                      $cpfCadastrado="t";
+                  }
               }
+              
           }
      }
      
@@ -82,8 +87,9 @@ echo "passou";
     
     if($_SESSION['erro'] === ""){
         
+        $tabela="funcionario";
         $cpfAtual=$_SESSION['atualCpf'];
-        $clausuraWere="cpf = '$nomeAtual'";
+        $clausuraWere="cpf = '$cpfAtual'";
 
         if($cpf!==$_SESSION['atualCpf']){
             $clausuraSET="cpf = '$cpf' ";
@@ -91,8 +97,8 @@ echo "passou";
             if($resultado==NULL)$_SESSION['erro']="30";
         }
         
-        $clausuraWere="cpf = '$cpf'";
-        
+        $clausuraWere=" cpf = '$cpf' ";
+        echo "passou".$cpf;
         if($nome!==$_SESSION['atualNome']){
             $clausuraSET="nome = '$nome' ";
             $resultado=$banco->update($tabela, $clausuraSET, $clausuraWere);
@@ -147,7 +153,7 @@ echo "passou";
             unset($_SESSION['atualTelefone']);
             unset($_SESSION['atualCargo']);
             
-            $_SESSION['mensagem']="3";
+            $_SESSION['mensagem']="4";
             header('location: mensagem.php');
         }else{
             header('location: HomeFuncValAtualizar.php');

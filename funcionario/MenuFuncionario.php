@@ -10,7 +10,7 @@
         <center>
             <a href="Home.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Home         </b></a><br><hr>
             <a href="Vendas.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Realizar Vendas         </b></a><br><hr>
-            <a href="CadCliente.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Cadastrar Cliente         </b></a><br><hr>
+            <a href="HomeCliente.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Cliente         </b></a><br><hr>
             <a href="Entrega.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Produtos para Entrega        </b></a><br><hr>
             <a href="VendasDiaria.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Vendas Diaria        </b></a><br><hr>
             <a href="../util/sair.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Sair         </b></a><br>

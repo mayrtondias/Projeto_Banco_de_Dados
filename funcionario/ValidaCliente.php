@@ -51,7 +51,7 @@
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');
     }else{
-        header('location: CadCliente.php');
+        header('location: ClienteCadastrar.php');
     }
     
 ?>

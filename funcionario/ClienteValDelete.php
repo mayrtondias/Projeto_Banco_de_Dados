@@ -8,13 +8,13 @@
         header('location: ../util/desconectado.php');
     }
 
-    $chave=explode("§", $_POST['selecionado']);
+    $chave=explode("§", $_POST['chave']);
                     $rua=$chave[0];
                     $bairro=$chave[1];
                     $numero=$chave[2];
     
     $tabela="cliente";
-    $clausuraWere="rua='$rua' AND bairro= '$bairro' AND numero='$numero'";
+    $clausuraWere="rua = '$rua' AND bairro = '$bairro' AND numero = '$numero'";
 
     $resultado=$banco->deletar($tabela, $clausuraWere);
     

@@ -10,8 +10,8 @@
         <?php
             require 'MenuFuncionario.php';
         ?>
-        <div style="border-radius:1em; width:70%; font-size:25px; background:#3300FF; border: 30px; margin: 15px; float: left">
-            <center>
+        <center>
+            <div style="border-radius:1em; width:70%; font-size:25px; background:#3300FF; border: 30px;float: left; margin: 15px ">
                 <form method="POST" action="ClienteValDelete.php" >
                     <?php
 
@@ -89,7 +89,7 @@
                               
                           }
                           
-                          if((($contador/10)>=($qtdeResult+1))&&(($contador%10)!=0)){
+                          if(($contador/10)>($qtdeResult+1)){
                               ?>
                               <button type="submit" name="selecionado" value="proximo" >Próximo</button>
                               <?php
@@ -97,8 +97,7 @@
                  ?>
                    <input type="hidden" name="pagina" value="<?php echo $qtdeResult; ?>"><br>
              </form>
-                </center>
         </div>
-            
+            </center>
     </body>
 </html>

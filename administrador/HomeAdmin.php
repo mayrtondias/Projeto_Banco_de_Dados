@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
@@ -13,7 +14,7 @@
         ?>
         
         <center>
-            <div  style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px">  
+            <div  id="tres">  
                 <center>
                     <a href="CadastraAdmin.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Cadastrar Administrador         </b></a><br><hr>
                     <a href="HomeAdminList.php" style="color:white; font-family:arial; text-decoration:none; padding:5px"><b>  Listar Administradores         </b></a><br><hr>

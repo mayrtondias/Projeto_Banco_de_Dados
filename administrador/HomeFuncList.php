@@ -4,14 +4,16 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
 
     <body>
+        
         <?php
             require 'MenuAdministrador.php';
         ?>
         
-        <div style="border-radius:1em; width:75%; font-size:25px; background:#3300FF; border: 30px; float: left; margin: 10px; margin-left: 25px">
+        <div id="tres">
             <center>
                 <form method="POST" action="HomeFuncList.php" >
                 <?php
@@ -93,8 +95,7 @@
                 
             </form>
            </center>
-        </div>
-           
+        </div>    
     </body>
 </html>
 

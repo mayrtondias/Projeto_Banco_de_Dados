@@ -4,9 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
+        
         <?php
             require 'MenuAdministrador.php';
             require '../banco/Banco.php';
@@ -45,7 +47,7 @@
         ?>
         
         <center>
-            <div>
+            <div id="tres">
                 <form action="ValidaFuncValAtualizarExec.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente<br>
                     Nome:<br>

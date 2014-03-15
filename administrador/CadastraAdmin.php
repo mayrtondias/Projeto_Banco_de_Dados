@@ -4,22 +4,22 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
         <?php
             require 'MenuAdministrador.php';
         ?>
-        
         <center>
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF; border: 30px">
+            <div id="tres">
                 <form action="ValidaAdministrador.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente<br>
-                    Nome:<br>
+                    <p>Nome:<br></p>
                     <input type="text" name="nome"><br>
-                    Login:<br>
+                    <p>Login:<br></p>
                     <input type="text" name="login"><br>
-                    Senha:<br>
+                    <p>Senha:<br></p>
                     <input type="password" name="senha"><br>
                     <?php
                         if(isset($_SESSION['erro'])==TRUE){

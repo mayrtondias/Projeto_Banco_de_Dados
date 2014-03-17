@@ -16,7 +16,7 @@
         <center>
             <div id="tres">
                 <form action="ValidaProduto.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
+                    Informe os dos abaixo para cadastrar um novo Produto<br>
                     Nome:<br>
                     <input type="text" name="nome"><br>
                     Valor:<br>

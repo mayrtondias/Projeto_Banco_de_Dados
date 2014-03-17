@@ -30,6 +30,8 @@
                     <input type="number" name="salario"><br>
                     <p>Telefone:<br></p>
                     <input type="text" name="telefone"><br>
+                    <p>Data de Contratação:<br></p>
+                    <input type="text" name="datacon"><br>
                     <p>Cargo:<br></p>
                     <input type="text" name="cargo"><br>
                     <?php
@@ -68,6 +70,9 @@
                                     break;
                                 case 11:
                                     $men="O CPF desse funcionario ja esta cadastrado no sistema,<br>Informe um CPF distinto.<br>";
+                                    break;
+                                case 12:
+                                    $men="A data de contratação deve ser DD/MM/AAAA.<br>";
                                     break;
                                 default :
                                     $men=" ";

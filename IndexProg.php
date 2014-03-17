@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Guaragas</title>
+        <link rel="stylesheet" type="text/css" href="estilos/Padrao.css" media="all"/>
     </head>
 
     <body>
-
+        
         <?php
         session_start();
 

@@ -34,6 +34,8 @@
                     echo "Problema na pesquisa<br>";
                 } else {
                     ?>
+                <br>
+               <center>
                     <table border="1px" cellpadding="5px" cellspacing="0" ID="alter">
                         <tr>
                             <td></td>
@@ -70,6 +72,7 @@
                     }
                     ?>
                 </table>
+                 </center>   
                     <?php
                     if ($qtdeResult > 0) {
                         ?>

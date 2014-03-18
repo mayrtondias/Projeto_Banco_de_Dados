@@ -43,7 +43,7 @@
         <center>
             <div id="tres">
                 <form action="ValidaAdminValAtualizarExec.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
+                    Informe os dos abaixo para cadastrar um novo Administrador<br>
                     Nome:<br>
                     <input type="text" name="nome" value="<?php echo $_SESSION['atualNome']; ?>"><br>
                     Login:<br>

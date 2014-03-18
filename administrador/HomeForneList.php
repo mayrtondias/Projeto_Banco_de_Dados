@@ -13,7 +13,7 @@
             require 'MenuAdministrador.php';
         ?>
         <center>
-            <div id="tres" >
+            <div>
                 <form method="POST" action="HomeForneList.php" >
                     <?php
 
@@ -35,7 +35,7 @@
                         echo "Problema na pesquisa<br>";
                     } else{
                         ?>
-                        <table>
+                        <table border="1px" cellpadding="5px" cellspacing="0" ID="alter">
                             <tr>
                                 <td></td>
                                 <td>Nome</td>

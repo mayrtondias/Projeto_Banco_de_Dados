@@ -14,12 +14,12 @@
         <center>
             <div id="tres">
                 <form action="ValidaAdministrador.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
-                    <p>Nome:<br></p>
+                    Informe os dos abaixo para cadastrar um novo Administrador<br>
+                    Nome:<br>
                     <input type="text" name="nome"><br>
-                    <p>Login:<br></p>
+                    Login:<br>
                     <input type="text" name="login"><br>
-                    <p>Senha:<br></p>
+                    Senha:<br>
                     <input type="password" name="senha"><br>
                     <?php
                         if(isset($_SESSION['erro'])==TRUE){
@@ -49,6 +49,7 @@
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>
+            
         </center>
     </body>
 </html>

@@ -195,6 +195,9 @@ class NewBanco {
                                                 quantidade integer NOT NULL,
                                                 codProduto integer NOT NULL REFERENCES produto(codProduto) ON DELETE CASCADE,
                                                 status character varying(1) NOT NULL,
+                                                rua character varying(50) NOT NULL,
+                                                bairro character varying(25) NOT NULL,
+                                                numero integer NOT NULL,
                                                 CONSTRAINT ck_valor CHECK (valor >=0),
                                                 CONSTRAINT horario PRIMARY KEY (data, hora))
                                                 ;";

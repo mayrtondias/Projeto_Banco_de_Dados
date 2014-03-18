@@ -10,7 +10,7 @@
     <body>
         
         <?php
-            require 'MenuAdministrador.php';
+            require 'MenuOp.php';
             require '../banco/Banco.php';
             
             session_start();
@@ -49,7 +49,7 @@
         <center>
             <div id="tres">
                 <form action="ValidaFuncValAtualizarExec.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
+                    Informe os dos abaixo para cadastrar um novo Funcionario<br>
                     Nome:<br>
                     <input type="text" name="nome" value="<?php echo $_SESSION['atualNome']; ?>"><br>
                     Login:<br>

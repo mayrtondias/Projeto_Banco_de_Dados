@@ -34,8 +34,8 @@ class Banco {
         $reg_query = "INSERT INTO produto  VALUES ('$nome',$valor,$codigo,$quantidade);";
         
         //Executando query para inserir o registro na tabela produto
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
-        
+        $res = pg_query($conexao, $reg_query);
+        return $res;
     }
     
     public function inserirAdministrador($nome, $login, $senha){
@@ -46,8 +46,8 @@ class Banco {
         $reg_query = "INSERT INTO administrador  VALUES ('$nome','$login','$senha');";
         
         //Executando query para inserir o registro na tabela
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
-        
+        $res = pg_query($conexao, $reg_query);
+        return $res;
     }
     
     public function inserirCliente($nome, $contato, $rua, $bairro, $numero){
@@ -58,33 +58,44 @@ class Banco {
         $reg_query = "INSERT INTO cliente  VALUES ('$nome','$contato','$rua','$bairro',$numero);";
         
         //Executando query para inserir o registro na tabela
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
-        
+        $res = pg_query($conexao, $reg_query);
+        return $res;
     }
     
-    public function inserirVenda($valor, $quantidade, $codigoProduto, $status){
-        
-        $conexao=$this->conectarBanco();
-        $data=  date($d);
-        $hora="jh";
-       //Query para inserir 1 registro na tabela administrador
-        $reg_query = "INSERT INTO venda  VALUES ('$data','$hora', $valor, $quantidade, $codigoProduto, '$status');";
-        
-        //Executando query para inserir o nregistro na tabela
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
-        
-    }
-    
-    public function inserirFuncionario($cpf, $nome, $identidade, $login, $senha, $salario, $telefone, $cargo){
+    public function inserirFornecedor($nome, $contato, $rua, $bairro, $numero){
         
         $conexao=$this->conectarBanco();
         
        //Query para inserir 1 registro na tabela administrador
-        $reg_query = "INSERT INTO funcionario  VALUES ('$cpf','$nome','$identidade','$login','$senha',$salario,'$telefone','$cargo');";
+        $reg_query = "INSERT INTO fornecedor  VALUES ('$nome','$contato','$rua','$bairro',$numero);";
         
         //Executando query para inserir o registro na tabela
-        $res = pg_query($conexao, $reg_query) or die("Nao foi possivel executar a query: $reg_query \n");
+        $res = pg_query($conexao, $reg_query);
+        return $res;
+    }
+    
+    public function inserirVenda($data, $hora, $valor, $quantidade, $codigoProduto, $status, $rua, $bairro, $numero){
         
+        $conexao=$this->conectarBanco();
+        
+       //Query para inserir 1 registro na tabela administrador
+        $reg_query = "INSERT INTO venda  VALUES ('$data','$hora',$valor,$quantidade,$codigoProduto,'$status','$rua','$bairro',$numero);";
+        
+        //Executando query para inserir o nregistro na tabela
+        $res = pg_query($conexao, $reg_query);
+        return $res;
+    }
+    
+    public function inserirFuncionario($cpf, $nome, $identidade, $login, $senha, $salario, $telefone, $cargo, $datacon, $datadem){
+        
+        $conexao=$this->conectarBanco();
+        
+       //Query para inserir 1 registro na tabela administrador
+        $reg_query = "INSERT INTO funcionario  VALUES ('$cpf','$nome','$identidade','$login','$senha',$salario,'$telefone','$cargo','$datacon','$datadem');";
+        
+        //Executando query para inserir o registro na tabela
+        $res = pg_query($conexao, $reg_query);
+        return $res;
     }
         
     public function pesquisar($pesquisa, $tabela){
@@ -95,23 +106,11 @@ class Banco {
         $show_query = "SELECT $pesquisa FROM $tabela";
         
         //Executando query para listar os registros da tabela
-        $res = pg_query($conexao, $show_query) or die("Nao foi possivel executar a sua pesquisa!\n");
+        $res = pg_query($conexao, $show_query);
         
         return $res;
     }
     
-    public function copiarArquivo($caminho, $tabela){
-        
-        $conexao=$this->conectarBanco();
-        
-        //Query para listar registros da tabela
-        $show_query = "COPY $tabela FROM ´$caminho´;";
-        
-        //Executando query para listar os registros da tabela
-        $res = pg_query($conexao, $show_query) or die("Nao foi possivel copiar o conteudo da $tabela .!\n");
-        
-        return $res;
-    }
     
     
     public function deletar($tabela, $clausuraWere){
@@ -122,7 +121,7 @@ class Banco {
         $show_query = "DELETE FROM $tabela WHERE $clausuraWere;";
         
         //Executando query para listar os registros da tabela
-        $res = pg_query($conexao, $show_query) or die("Nao foi possivel deletar a informacao de $tabela .!\n");
+        $res = pg_query($conexao, $show_query);
         
         return $res;
     }
@@ -136,7 +135,7 @@ class Banco {
         $show_query = "UPDATE $tabela SET $clausuraSET WHERE $clausuraWere";
         
         //Executando query para listar os registros da tabela
-        $res = pg_query($conexao, $show_query) or die("Nao foi possivel atualizar a informacao de $tabela .!\n");
+        $res = pg_query($conexao, $show_query);
         
         return $res;
     }

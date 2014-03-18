@@ -9,13 +9,13 @@
      
     <body>
         <?php
-            require 'MenuAdministrador.php';
+            require 'MenuOp.php';
         ?>
         
         <center>
             <div id="tres">
                 <form action="ValidaFuncionario.php" method="post">
-                    Informe os dos abaixo para cadastrar um novo cliente<br>
+                    Informe os dos abaixo para cadastrar um novo Fornecedor<br>
                     <p>Nome:<br></p>
                     <input type="text" name="nome"><br>
                     <p>Login:<br></p>
@@ -83,6 +83,7 @@
                     <input type="submit" value="Cadastrar">
                 </form>
             </div>
+            
         </center>
     </body>
 </html>

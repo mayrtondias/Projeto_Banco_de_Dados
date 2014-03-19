@@ -4,13 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas </title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
 
     <body>
-        <div>
+        <div id="tres">
             <form method="POST" action="selecionarProduto.php" onsubmit="return confirm('Voce tem certeza?');">
                 <table>
                     <tr>
+                        <td>Nome</td>
                         <td>Rua</td>
                         <td>Bairro</td>
                         <td>Rua</td>
@@ -28,7 +30,8 @@
                         header('location: ../util/desconectado.php');
                     }
 
-                    $nome = $_POST['pesquisarNome'];      
+                    $nome = $_POST['pesquisarNome'];
+                    
                     $_SESSION['erro']="";
                     $tabela="cliente";
                     $pesquisa="*";
@@ -46,8 +49,10 @@
                           while($registro = pg_fetch_array($resultado)){
 
                               if($registro['nome']===$nome){
+                                  
                                   ?>
                                   <tr>
+                                    <td><?php echo $registro['nome']; ?></td>
                                     <td><?php echo $registro['rua']; ?></td>
                                     <td><?php echo $registro['bairro']; ?></td>
                                     <td><?php echo $registro['numero']; ?></td>

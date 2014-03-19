@@ -31,21 +31,18 @@
                     <button type="submit" name="selecionado" value="5">Criar Tabela Produto</button>
                     <button type="submit" name="selecionado" value="6">Criar Tabela Venda</button>
                     <button type="submit" name="selecionado" value="8">Criar Tabela Fornecedor</button>
-                    <button type="submit" name="selecionado" value="7">Criar Tabela Compra</button>
-                    <button type="submit" name="selecionado" value="9">Criar Tabela Conta</button>
+                    
                     <button type="submit" name="selecionado" value="10">Apagar Banco</button>
                     <button type="submit" name="selecionado" value="11">Criar Indices Administrador</button>
                     <button type="submit" name="selecionado" value="12">Criar Indices Cliente</button>
                     <button type="submit" name="selecionado" value="15">Criar Indices Fornecedor</button>
-                    <button type="submit" name="selecionado" value="13">Criar Indices Compra</button>
-                    <button type="submit" name="selecionado" value="14">Criar Indices Conta</button>
+                   
                     <button type="submit" name="selecionado" value="16">Criar Indices Funcionario</button>
                     <button type="submit" name="selecionado" value="17">Criar Indices Produto</button>
                     <button type="submit" name="selecionado" value="18">Criar Indices Venda</button>
                     <button type="submit" name="selecionado" value="19">Apagar Tabela Administrador</button>
                     <button type="submit" name="selecionado" value="20">Apagar Tabela Cliente</button>
-                    <button type="submit" name="selecionado" value="21">Apagar Tabela Compra</button>
-                    <button type="submit" name="selecionado" value="22">Apagar Tabela Conta</button>
+                    
                     <button type="submit" name="selecionado" value="23">Apagar Tabela Fornecedor</button>
                     <button type="submit" name="selecionado" value="24">Apagar Tabela Funcionario</button>
                     <button type="submit" name="selecionado" value="25">Apagar Tabela Produto</button>

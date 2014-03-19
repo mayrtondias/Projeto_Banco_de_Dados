@@ -7,14 +7,15 @@
     </head>
 
     <body>
-        <div>
-            <form method="POST" action="selecionarProduto.php" onsubmit="return confirm('Voce tem certeza?');">
+        <div id="tres">
+            <form method="POST" action="ValidaVenda.php" onsubmit="return confirm('Voce tem certeza?');">
                 <table>
                     <tr>
                         <td>Nome</td>
                         <td>Valor</td>
                         <td>Codigo</td>
                         <td>Quantidade Maxima</td>
+                        <td>Quantidade da Compra</td>
                         <td>Selecionar</td>
                     </tr>
 
@@ -51,9 +52,11 @@
                                 <tr>
                                   <td><?php echo $registro['nome']; ?></td>
                                   <td><?php echo $registro['valor']; ?></td>
-                                  <td><?php echo $registro['codProduto']; ?></td>
+                                  <td><?php echo $registro['codproduto']; ?></td>
                                   <td><?php echo $registro['quantidade']; ?></td>
-                                  <td><button type="submit" name="selecionado" value="<?php echo $registro['codProduto']; ?>" >OK</button></td>
+                                  
+                                  <td><input id="teste" type="text" name="teste[]"><br></td>
+                                  <td><button type="submit" name="codigo" value="<?php echo $registro['codproduto']; ?>" >OK</button></td>
                                 </tr>
                               <?php
                               }

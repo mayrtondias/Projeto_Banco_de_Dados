@@ -4,13 +4,15 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas </title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
 
     <body>
-        <div>
+        <div id="tres">
             <form method="POST" action="SelecionarProduto.php" onsubmit="return confirm('Voce tem certeza?');">
                 <table>
                     <tr>
+                        <td>Nome</td>
                         <td>Rua</td>
                         <td>Bairro</td>
                         <td>Rua</td>
@@ -48,6 +50,7 @@
                               if($registro['rua']===$rua){
                                   ?>
                                   <tr>
+                                    <td><?php echo $registro['nome']; ?></td>
                                     <td><?php echo $registro['rua']; ?></td>
                                     <td><?php echo $registro['bairro']; ?></td>
                                     <td><?php echo $registro['numero']; ?></td>

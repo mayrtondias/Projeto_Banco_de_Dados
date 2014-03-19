@@ -17,6 +17,7 @@
     $salario = $_POST['salario'];
     $telefone = $_POST['telefone'];
     $cargo = $_POST['cargo'];
+    $datacon = $_POST['datacon'];
     $usuarioCadastrado="f";
     $funcionarioCadastrado="f";
     $cpfCadastrado="f";
@@ -28,7 +29,9 @@
     $resultado=$banco->pesquisar($pesquisa, $tabela);
 
     if($resultado==NULL){
-        echo "Problema na pesquisa.<br>";
+        unset($_SESSION['erro']);
+        $_SESSION['mensagem']="301";
+        header('location: mensagem.php');
     } else{
           while($registro = pg_fetch_array($resultado)){
               if($registro['cpf']===$cpf){
@@ -46,7 +49,9 @@
     $resultado=$banco->pesquisar($pesquisa, $tabela);
 
     if($resultado==NULL){
-        echo "Problema na pesquisa.<br>";
+        unset($_SESSION['erro']);
+        $_SESSION['mensagem']="300";
+        header('location: mensagem.php');
     } else{
           while($registro = pg_fetch_array($resultado)){
               if($registro['login']===$login){
@@ -77,10 +82,12 @@
         $_SESSION['erro']="10";
     } else if($cpfCadastrado==="t"){
         $_SESSION['erro']="11";
+    } else if(($datacon==="")||(strlen($datacon)!=10)){
+        $_SESSION['erro']="12";
     }
     
     if($_SESSION['erro'] === ""){
-        $banco->inserirFuncionario($cpf, $nome, $identidade, $login, $senha, (float)$salario, $telefone, $cargo);
+        $banco->inserirFuncionario($cpf, $nome, $identidade, $login, $senha, (float)$salario, $telefone, $cargo, $datacon, null);
         unset($_SESSION['erro']);
         $_SESSION['mensagem']="1";
         header('location: mensagem.php');

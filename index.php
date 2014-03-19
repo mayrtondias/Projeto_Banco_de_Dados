@@ -7,9 +7,9 @@
     </head>
 
     <body>
-        <h1 id="um">GuaraGás - Satisfazendo pessoas em toda João Pessoa</h1>
+        <h1 id="banner">GuaraGás - Satisfazendo pessoas em toda João Pessoa</h1>
     <center>
-        <div id="tres">
+        <div id="cinco">
             <form action="util/valida.php" method="post">
                 <label>Login:</label><br>
                 <input type="text" name="login"><br>

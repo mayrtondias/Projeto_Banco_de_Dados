@@ -4,9 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <title>Guaragas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
+        <?php
+            require 'MenuFuncionario.php';
+        ?>
         <center>
             <div style="border-radius:1em; width:20%; font-size:25px; background:#3399FF; margin: 15%">
                 <form action="valida.php" method="post">

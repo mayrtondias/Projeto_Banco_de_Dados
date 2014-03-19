@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
@@ -12,8 +13,8 @@
         ?>
         
         <center>
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF; border: 30px">
-                <form action="vendaPesquisarClienteNome.php" method="post">
+            <div id="tres">
+                <form action="VendaPesquisarClienteNome.php" method="post">
                     
                     Pesquisar por nome: <br>
                     <input type="text" name="pesquisarNome"><br>
@@ -33,9 +34,9 @@
                     
                     <input type="submit" value="Pesquisar">
                 </form>
-            </div>
             
-            <div style="border-radius:1em; width:20%; font-size:25px; background:#3300FF;border: 30px; margin: 10px">
+            
+            
                 <form action="VendaPesquisarClienteRua.php" method="post">
                     
                     Pesquisar por rua:<br>

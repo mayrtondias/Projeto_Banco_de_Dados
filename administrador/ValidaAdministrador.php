@@ -22,7 +22,9 @@
     $resultado=$banco->pesquisar($pesquisa, $tabela);
 
     if($resultado==NULL){
-        echo "Problema na pesquisa.<br>";
+        unset($_SESSION['erro']);
+        $_SESSION['mensagem']="300";
+        header('location: mensagem.php');
     } else{
           while($registro = pg_fetch_array($resultado)){
               if($registro['login']===$login){
@@ -35,7 +37,9 @@
      $pesquisa="*";
      
      if($resultado==NULL){
-        echo "Problema na pesquisa.<br>";
+        unset($_SESSION['erro']);
+        $_SESSION['mensagem']="301";
+        header('location: mensagem.php');
      } else{
           while($registro = pg_fetch_array($resultado)){
               if($registro['login']===$login){
@@ -63,6 +67,6 @@
          $_SESSION['mensagem']="1";
          header('location: mensagem.php');
      }else{
-         header('location: HomeAdmin.php');
+         header('location: CadastraAdmin.php');
      }
 ?>

@@ -222,72 +222,7 @@ class NewBanco {
         
     }
     
-    //criando a tabela Conta
-    public function criandoTabelaConta() {
-        
-        $conexao=$this->conectarBanco();
-        
-        $tab_query = "CREATE TABLE conta (data character varying(10) NOT NULL,
-                                          hora character varying(8) NOT NULL,
-                                          descricao character varying(50),
-                                          valor real NOT NULL,
-                                          CONSTRAINT ck_valor_conta CHECK (valor >=0),
-                                          CONSTRAINT horario_conta PRIMARY KEY (data, hora));";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Conta\n");
-        
-    }
     
-    public function criandoIndicesConta() {
-        
-        $conexao=$this->conectarBanco();
-        $tab_query = "CREATE INDEX horario_conta_index ON conta (data, hora);";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar o index da tabela Conta\n");
-    }
-    
-    //apagando a tabela Venda
-    public function apagarTabelaConta() {
-        
-        $conexao=$this->conectarBanco();
-        
-        $tab_query = "DROP TABLE conta;";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Conta\n");
-        
-    }
-    
-    public function criandoTabelaCompra() {
-        
-        $conexao=$this->conectarBanco();
-        
-        $tab_query = "CREATE TABLE compra (data character varying(10) NOT NULL,
-                                          hora character varying(8) NOT NULL,
-                                          descricao character varying(50),
-                                          valor real NOT NULL,
-                                          quantidade integer NOT NULL,
-                                          nome character varying(30) NOT NULL REFERENCES fornecedor(nome),
-                                          codProduto integer NOT NULL REFERENCES produto(codProduto) ON DELETE CASCADE,
-                                          CONSTRAINT ck_valor_compra CHECK (valor >=0),
-                                          CONSTRAINT horario_compra PRIMARY KEY (data, hora)
-                                          );";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar a tabela Compra\n");
-        
-    }
-    
-    public function criandoIndicesCompra() {
-        
-        $conexao=$this->conectarBanco();
-        $tab_query = "CREATE INDEX horario_compra_index ON compra (data, hora);";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel criar o index da tabela Compra\n");
-    }
-    
-    //apagando a tabela Venda
-    public function apagarTabelaCompra() {
-        
-        $conexao=$this->conectarBanco();
-        
-        $tab_query = "DROP TABLE compra;";
-        $res = pg_query($conexao,$tab_query) or die("Nao foi possivel apagar a tabela Compra\n");
-        
-    }
     
     public function criandoTabelaFornecedor() {
         

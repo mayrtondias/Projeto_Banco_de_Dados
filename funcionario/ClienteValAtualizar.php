@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>GuaraGas</title>
+        <link rel="stylesheet" type="text/css" href="../estilos/Padrao.css" media="all"/>
     </head>
      
     <body>
@@ -22,7 +23,7 @@
                     $rua=$chave[0];
                     $bairro=$chave[1];
                     $numero=$chave[2];
-                    
+
             $tabela="cliente";
             $pesquisa="*";
            
@@ -31,14 +32,13 @@
             if($resultado==NULL){
                 echo "Problema na pesquisa.<br>";
             }else{
-                while($registro = pg_fetch_array($resultado)){echo "passando";
+                while($registro = pg_fetch_array($resultado)){
                     if(($registro['rua']===$rua)&&($registro['bairro']===$bairro)&&($registro['numero']===$numero)){
                         $_SESSION['atualNome']=$registro['nome'];
                         $_SESSION['atualContato']=$registro['contato'];
                         $_SESSION['atualRua']=$registro['rua'];
                         $_SESSION['atualBairro']=$registro['bairro'];
                         $_SESSION['atualNumero']=$registro['numero'];
-                        echo "passou";
                         break;
                     }
                 }
@@ -46,7 +46,7 @@
         ?>
         
         <center>
-            <div style="border-radius:1em; width:45%; font-size:25px; background:#3300FF;border: 30px">
+            <div id="tres">
                 <form action="ClienteValAtualizarExec.php" method="post">
                     Informe os dos abaixo para cadastrar um novo cliente <br>
                     Nome:<br>

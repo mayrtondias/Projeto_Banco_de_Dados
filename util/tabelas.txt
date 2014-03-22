@@ -79,6 +79,7 @@ WITH (
 ALTER TABLE produto
   OWNER TO postgres;
 
+
 -- Table: venda
 
 -- DROP TABLE venda;

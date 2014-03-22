@@ -31,7 +31,7 @@
                         $_SESSION['senha']=$registro['senha'];
                         
                         header('location: ../administrador/Home.php');
-                    }//verifica se o usuario é adm
+                    }
                 }
             }
             

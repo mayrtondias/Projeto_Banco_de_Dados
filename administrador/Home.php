@@ -9,10 +9,10 @@
 
     <body>
         <?php
-            require 'MenuAdministrador.php';
+        require 'MenuAdministrador.php';
         ?>
     <center>
-        
+
     </center>
 </body>
 </html>

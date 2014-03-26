@@ -1,25 +1,25 @@
 <?php
-    require '../banco/Banco.php';
 
-    $banco=new banco();
-    session_start();
+require '../banco/Banco.php';
 
-    if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
-        header('location: ../util/desconectado.php');
-    }
+$banco = new banco();
+session_start();
 
-    $chave=$_POST['chave'];
-    
-    $tabela="fornecedor";
-    $clausuraWere="nome = '$chave'";
+if (( isset($_SESSION['login']) == FALSE) || ( isset($_SESSION['senha']) == FALSE)) {
+    header('location: ../util/desconectado.php');
+}
 
-    $resultado=$banco->deletar($tabela, $clausuraWere);
-    
-    if($resultado==NULL){
-        echo "Problema na exclusão.<br>";
-    }else{
-        $_SESSION['mensagem']="1";
-        header('location: mensagem.php');
-        
-    }
-    ?>
+$chave = $_POST['chave'];
+
+$tabela = "fornecedor";
+$clausuraWere = "nome = '$chave'";
+
+$resultado = $banco->deletar($tabela, $clausuraWere);
+
+if ($resultado == NULL) {
+    echo "Problema na exclusão.<br>";
+} else {
+    $_SESSION['mensagem'] = "1";
+    header('location: mensagem.php');
+}
+?>

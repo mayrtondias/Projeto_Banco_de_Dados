@@ -1,15 +1,15 @@
 <?php
-    session_start();
+session_start();
 
-    if( ( isset($_SESSION['login']) == FALSE)||( isset($_SESSION['senha']) == FALSE) ){
-        header('location: ../util/desconectado.php');
-    }
-    //
+if (( isset($_SESSION['login']) == FALSE) || ( isset($_SESSION['senha']) == FALSE)) {
+    header('location: ../util/desconectado.php');
+}
+//
 ?>
+<center>
+
+    <h1 id="banner">GuaraGás - Satisfazendo pessoas em toda João Pessoa</h1>
     <center>
-        
-        <h1 id="banner">GuaraGás - Satisfazendo pessoas em toda João Pessoa</h1>
-        <center>
         <div id="conteudo">
             <ul id="menu">
                 <li><a href="Home.php"><b> Home </b></a><br>						
@@ -43,5 +43,5 @@
             </ul>
 
         </div> 	
-            
-            </center>
+
+    </center>

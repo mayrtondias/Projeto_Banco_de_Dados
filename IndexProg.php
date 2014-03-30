@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        
+
         <?php
         session_start();
 
@@ -39,13 +39,13 @@
                 <input type="text" name="nome"><br>
                 <label style="color:white; font-family:arial; text-decoration:none; padding:5px">Senha:</label><br>
                 <input type="password" name="senha"><br>
-<?php
-if (isset($_SESSION['erro']) == TRUE) {
-    if ($_SESSION['erro'] == TRUE) {
-        echo '<label style="color:red; font-family:arial; text-decoration:none; padding:5px">Errou!</label><br>';
-    }
-}
-?>
+                <?php
+                if (isset($_SESSION['erro']) == TRUE) {
+                    if ($_SESSION['erro'] == TRUE) {
+                        echo '<label style="color:red; font-family:arial; text-decoration:none; padding:5px">Errou!</label><br>';
+                    }
+                }
+                ?>
                 <input type="submit" value="Entrar">
             </form>
         </div>
